@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CE4CE983-F9F5-7BC8-CB5F-0687DC0F1650" name="DONUT">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 21:18:22 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idDonut" id="DE2FE8F9-8BB9-A2BE-B87C-6C5A835AB667">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 21:18:33 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nomDonut" id="34DE1583-5625-038E-7F1D-04125DD51CD2">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 21:18:58 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="4D9044A8-A53A-B131-5917-2B12D24D7364">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 21:19:19 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precioU" id="5E7B45D3-0EAC-411F-039D-EE174FE45C93">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 21:19:46 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="stock" id="99296EA9-6E03-01EC-C3B9-0D8D0419A9EC">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 21:21:09 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idCategoria" id="F083660D-7545-E804-0482-C6BCB3270548">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 21:40:45 UTC</createdTime>
+<generatorID>6966FBEC-1389-DC4F-6653-9FAF26AB150C</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<referedAttribute>CABBDE17-DD37-FCB1-B3E1-965248B49C68</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="60FEF2C5-0446-6012-0625-7D78B032C7F9" name="DONUT PK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 21:18:50 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DE2FE8F9-8BB9-A2BE-B87C-6C5A835AB667</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

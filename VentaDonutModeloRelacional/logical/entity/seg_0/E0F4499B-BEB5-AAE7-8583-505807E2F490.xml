@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E0F4499B-BEB5-AAE7-8583-505807E2F490" name="CLIENTE">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 20:36:28 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idCliente" id="F26B1CBA-1A68-0FAC-B93A-9B0A329831A1">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 20:46:49 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rutCliente" id="3612FBF7-15FC-4527-E848-F9FBE3343B13">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 20:48:56 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombreCliente" id="F52F8FFC-8073-5B6C-2596-9CDF0A1C7F11">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 20:49:24 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellidoCliente" id="9A81FD76-9E1A-C958-7C23-72CFB8C18591">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 20:49:46 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="E2866B14-ADC7-5306-D5A3-3CD00DC1604E">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 20:50:11 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccionEnvio" id="70C357E2-C347-54FE-F075-9167F10409E9">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 20:50:36 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80</dataTypeSize>
+<ownDataTypeParameters>80,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E5FC3C90-98EB-4F89-1265-EDA436BB6749" name="CLIENTE PK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 20:48:52 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F26B1CBA-1A68-0FAC-B93A-9B0A329831A1</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="3714DA22-8156-8491-1426-5B906D564EC0" name="UK_Rut">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-29 04:14:37 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<newElementsIDs>3612FBF7-15FC-4527-E848-F9FBE3343B13</newElementsIDs>
+<usedAttributes>
+<attributeRef>3612FBF7-15FC-4527-E848-F9FBE3343B13</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

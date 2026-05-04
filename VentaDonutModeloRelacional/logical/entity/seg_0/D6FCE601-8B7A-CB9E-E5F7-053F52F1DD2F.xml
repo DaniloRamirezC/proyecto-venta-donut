@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D6FCE601-8B7A-CB9E-E5F7-053F52F1DD2F" name="COMPROBANTE_PAGO">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 21:33:11 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idComprobante" id="C7F8877B-4915-20A2-7EBD-D5AA1B2DE126">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 21:33:33 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="detalle" id="37B310DD-223A-D201-C24B-200F431E6B07">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-29 03:36:36 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="iva" id="185AF4CC-B4BC-D81D-CA92-2F84BC077216">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-29 03:37:08 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idPago" id="28966EC9-B738-54D7-C9B0-3C6B95F0FCDD">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-29 03:57:00 UTC</createdTime>
+<generatorID>F41D930A-563A-49E5-D3D9-FBC120338AD8</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<referedAttribute>8E2DD5DB-FFB7-1004-2ED3-9214EEA67B39</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="94B72FB6-0080-927E-1544-EC36E587B3FF" name="COMPROBANTE_PAGO PK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-29 03:56:27 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C7F8877B-4915-20A2-7EBD-D5AA1B2DE126</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

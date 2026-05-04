@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="VentaDonutModeloRelacional" id="E1604E05-98DB-D43A-9B4D-17B55B5E7A87" version="3.5">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 20:35:15 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E1604E05-98DB-D43A-9B4D-17B55B5E7A87</designId>
+</OSDM_Design>

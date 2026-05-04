@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9CFE2E43-96DD-B857-F668-9BCE70AE4759" name="CLIENTE">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<generatorID>E0F4499B-BEB5-AAE7-8583-505807E2F490</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCliente" id="B0B2BBFE-7D98-F682-01A2-307F7E75A3BE">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<generatorID>F26B1CBA-1A68-0FAC-B93A-9B0A329831A1</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rutCliente" id="A8161584-BA37-1388-BA14-AF6CA79BC8CC">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<generatorID>3612FBF7-15FC-4527-E848-F9FBE3343B13</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombreCliente" id="B4B4A6CC-803D-0E70-80F2-6AA701AFCC74">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<generatorID>F52F8FFC-8073-5B6C-2596-9CDF0A1C7F11</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellidoCliente" id="6C0DD120-6524-95A5-F224-50C339016913">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<generatorID>9A81FD76-9E1A-C958-7C23-72CFB8C18591</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="6E65BA8C-BA43-0BCE-1043-FBB7D89E78E3">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<generatorID>E2866B14-ADC7-5306-D5A3-3CD00DC1604E</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccionEnvio" id="99545702-310B-EFDF-D999-D2B50A229476">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<generatorID>70C357E2-C347-54FE-F075-9167F10409E9</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80</dataTypeSize>
+<ownDataTypeParameters>80,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE3F83C0-10D8-5BF1-0D91-7357CFD6D777" name="CLIENTE_PK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<generatorID>E5FC3C90-98EB-4F89-1265-EDA436BB6749</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0B2BBFE-7D98-F682-01A2-307F7E75A3BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7B0C33EA-05C8-BC2B-82DC-26862D54D745" name="CLIENTE_rutCliente_UN">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<generatorID>3714DA22-8156-8491-1426-5B906D564EC0</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8161584-BA37-1388-BA14-AF6CA79BC8CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

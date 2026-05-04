@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="B6445E69-87CA-C182-E0ED-D4062D05BF0E" mainViewID="3B6DED34-B8DE-CE3D-A838-3B084166130F">
+<createdBy>Asus</createdBy>
+<createdTime>2026-04-28 20:35:15 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
