@@ -36,6 +36,10 @@ public class ClienteService
     {
         clienteRepository.deleteById(id);
     }
+    public List<Cliente> buscarPorNombre(String nombre)
+    {
+        return clienteRepository.buscarPorNombre(nombre);
+    }
     public int totalClientes()
     {
         List<Cliente> listaClientes = clienteRepository.listarTodosLosClientes();

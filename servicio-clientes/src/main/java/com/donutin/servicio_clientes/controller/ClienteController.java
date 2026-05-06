@@ -34,10 +34,21 @@ public class ClienteController
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
-    @GetMapping("/total")
-    public int totalClientes()
+    @GetMapping("/nombre/{nombre}")
+    public ResponseEntity<List<Cliente>> buscarPorNombre(@PathVariable String nombre)
     {
-        return clienteService.totalClientes();
+        List<Cliente> clienteNom = clienteService.buscarPorNombre(nombre);
+        if(clienteNom.isEmpty())
+        {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(clienteNom);
+    }
+    @GetMapping("/total")
+    public ResponseEntity<Integer> totalClientes()
+    {
+        int total = clienteService.totalClientes();
+        return ResponseEntity.ok(total);
     }
     @PostMapping
     public ResponseEntity<Cliente> crear(@RequestBody Cliente cliente)
