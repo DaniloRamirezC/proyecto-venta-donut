@@ -36,4 +36,16 @@ public class DonutService
     {
         donutRepository.deleteById(id);
     }
+    public List<Donut> buscarPorCategoria(Long idCategoria)
+    {
+        return donutRepository.buscarDonasPorCategoria(idCategoria);
+    }
+    public List<Object[]> conteoPorNombreCategoria()
+    {
+        return donutRepository.conteoPorNombreCategoria();
+    }
+    public List<Donut> buscarDonasPorStock(Integer stock)
+    {
+        return donutRepository.buscarDonasPorStock(stock);
+    }
 }

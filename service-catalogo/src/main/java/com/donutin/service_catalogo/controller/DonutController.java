@@ -34,6 +34,36 @@ public class DonutController
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+    @GetMapping("/categoria/{id}")
+    public ResponseEntity<List<Donut>> buscarPorCategoria(@PathVariable Long id)
+    {
+        List<Donut> donut = donutService.buscarPorCategoria(id);
+        if(donut.isEmpty())
+        {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(donut);
+    }
+    @GetMapping("/conteo-categoria")
+    public ResponseEntity<List<Object[]>> conteoPorCategoria()
+    {
+        List<Object[]> contar = donutService.conteoPorNombreCategoria();
+        if(contar.isEmpty())
+        {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(contar);
+    }
+    @GetMapping("/stock/{stock}")
+    public ResponseEntity<List<Donut>> buscarDonaPorStock(Integer stock)
+    {
+        List<Donut> donaStock = donutService.buscarDonasPorStock(stock);
+        if(donaStock.isEmpty())
+        {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(donaStock);
+    } 
     @PostMapping
     public ResponseEntity<Donut> crear(@RequestBody Donut donut)
     {
