@@ -16,7 +16,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long>
     @Query("""
             SELECT c
             FROM Cliente c
-            WHERE c.nombre = :nombre
+            WHERE c.nombreCliente = :nombre
             """)
     List<Cliente> buscarPorNombre(String nombre);
     @Query("""

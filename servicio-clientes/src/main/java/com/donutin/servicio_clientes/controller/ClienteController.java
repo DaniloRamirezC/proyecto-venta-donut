@@ -27,7 +27,7 @@ public class ClienteController
     {
         return clienteService.listarTodos();
     }
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<Cliente> obtenerPorId(@PathVariable Long id)
     {
         return clienteService.buscarPorId(id)
@@ -55,7 +55,7 @@ public class ClienteController
     {
         return ResponseEntity.ok(clienteService.guardar(cliente));
     }
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id)
     {
         clienteService.eliminar(id);
