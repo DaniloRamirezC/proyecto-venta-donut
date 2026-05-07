@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.donutin.servicio_pedido.model.Pedido;
 import com.donutin.servicio_pedido.service.GestionService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/v1/pedidos")
 public class PedidoController 
@@ -25,7 +27,7 @@ public class PedidoController
         return gestionService.listarPedidos();
     }
     @PostMapping 
-    public Pedido crearPedido(@RequestBody Pedido pedido)
+    public Pedido crearPedido(@Valid @RequestBody Pedido pedido)
     {
         return gestionService.guardarPedido(pedido);
     }

@@ -10,6 +10,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +26,8 @@ public class Pedido
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPedido;
+    @NotNull(message = "La fecha del pedido es obligatoria")
+    @PastOrPresent(message = "La fecha del pedido no puede ser futura")
     private LocalDate fechaPedido;
 
     private Long clienteId; //Referencia lógica al otro microservicio (servicio-cliente)

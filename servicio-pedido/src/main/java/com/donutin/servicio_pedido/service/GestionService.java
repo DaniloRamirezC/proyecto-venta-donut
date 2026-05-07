@@ -47,7 +47,6 @@ public class GestionService
         return detallePedidoRepository.findAll();
     }
     // Para Pedido
-    @Autowired
     public Pedido guardarPedido(Pedido pedido)
     {
         return pedidoRepository.save(pedido);
@@ -65,7 +64,7 @@ public class GestionService
             try {
                 Object donut = webClientBuilder.build()
                 .get()
-                .uri("http://localhost:8081/donuts" + detallePedido.getDonutId())
+                .uri("http://localhost:8081/donuts/" + detallePedido.getDonutId())
                 .retrieve()
                 .bodyToMono(Object.class)
                 .block();

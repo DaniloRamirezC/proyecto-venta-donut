@@ -8,5 +8,5 @@ import com.donutin.servicio_pedido.model.DetallePedido;
 
 public interface DetallePedidoRepository extends JpaRepository<DetallePedido,Long>
 {
-    List<DetallePedido> findByIdDonut(Long idDonut);
+    List<DetallePedido> findByDonutId(Long donutId);
 }
