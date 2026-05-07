@@ -41,7 +41,7 @@ public class Donut
     @Column(nullable = false)
     private Integer precioUnitario;
 
-    @NotNull(message = "El precio no puede ser nulo")
+    @NotNull(message = "El stock no puede ser nulo")
     @Min(value = 0, message = "El stock no puede ser negativo")
     @Column(nullable = false)
     private Integer stock;

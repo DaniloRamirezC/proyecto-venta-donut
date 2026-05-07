@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.donutin.service_catalogo.model.Donut;
 import com.donutin.service_catalogo.service.DonutService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/donuts")
 public class DonutController 
@@ -27,7 +29,7 @@ public class DonutController
     {
         return donutService.listarTodos();
     }
-    @GetMapping 
+    @GetMapping("/{id}")
     public ResponseEntity<Donut> obtenerPorId(@PathVariable Long id)
     {
         return donutService.buscarPorId(id)
@@ -55,7 +57,7 @@ public class DonutController
         return ResponseEntity.ok(contar);
     }
     @GetMapping("/stock/{stock}")
-    public ResponseEntity<List<Donut>> buscarDonaPorStock(Integer stock)
+    public ResponseEntity<List<Donut>> buscarDonaPorStock(@PathVariable Integer stock)
     {
         List<Donut> donaStock = donutService.buscarDonasPorStock(stock);
         if(donaStock.isEmpty())
@@ -65,11 +67,11 @@ public class DonutController
         return ResponseEntity.ok(donaStock);
     } 
     @PostMapping
-    public ResponseEntity<Donut> crear(@RequestBody Donut donut)
+    public ResponseEntity<Donut> crear(@Valid @RequestBody Donut donut)
     {
         return ResponseEntity.ok(donutService.guardar(donut));
     }
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id)
     {
         donutService.eliminar(id);
