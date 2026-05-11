@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.donutin.servicio_pedido.service.GestionService;
 
 @RestController
-@RequestMapping("/api/v1/detalles")
+@RequestMapping("/api/v1/pedidos/detalles")
 public class DetallePedidoController 
 {
     @Autowired
