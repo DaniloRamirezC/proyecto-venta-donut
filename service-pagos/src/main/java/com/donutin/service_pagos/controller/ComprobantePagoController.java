@@ -13,7 +13,7 @@ import com.donutin.service_pagos.model.ComprobantePago;
 import com.donutin.service_pagos.service.PagosService;
 
 @RestController
-@RequestMapping("/api/v1/comprobantes")
+@RequestMapping("/api/v1/pagos/comprobantes")
 public class ComprobantePagoController {
 
     @Autowired
