@@ -38,8 +38,8 @@ public class Pago {
     private Integer monto;
 
     @NotBlank(message = "Estado transaccion no puede estar vacío")
-    @Column(nullable = false, length = 25)
-    private String estadoTransaccion;
+    @Column(nullable = false)
+    private Boolean estadoTransaccion;
     
     private Long pedidoId; //Referencia lógica al microservicio servicio-pedido
 
