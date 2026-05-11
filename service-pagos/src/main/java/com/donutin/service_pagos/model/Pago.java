@@ -47,7 +47,7 @@ public class Pago {
     private Object datosPedido; 
 
     @OneToOne(mappedBy = "pago", cascade = CascadeType.ALL)
-    private List<ComprobantePago> comprobantePago;
+    private ComprobantePago comprobantePago;
 
     
 }
