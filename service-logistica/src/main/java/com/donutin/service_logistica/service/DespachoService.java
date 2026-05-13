@@ -33,6 +33,18 @@ public class DespachoService {
         return despachoRepository.findAll();
     }
 
+    //METODO PARA ACTUALIZAR ESTADO DE PEDIDO
+    public Despacho actualizarEstado(Long id, String nuevoEstado){
+        Despacho despacho = despachoRepository.findById(id).orElse(null);
+
+        if (despacho != null) {
+        despacho.setEstado(nuevoEstado);
+        Despacho actualizado = despachoRepository.save(despacho);
+        return enriquecerConPedido(actualizado);
+        }
+        return null;
+    }
+
     private Despacho enriquecerConPedido(Despacho despacho){
         if(despacho.getPedidoId() != null){
             try{
