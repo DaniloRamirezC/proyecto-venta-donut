@@ -1,7 +1,5 @@
 package com.donutin.service_catalogo.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -49,6 +47,5 @@ public class Donut
     @NotNull(message = "La categoría no puede ser nula")
     @ManyToOne
     @JoinColumn(name = "categoria_id",nullable = false)
-    @JsonIgnore
     private Categoria categoria;
 }
