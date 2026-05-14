@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7D5D4FD0-8355-D024-D0AC-529325997D9A" name="PAGO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8A78939E-2C4B-94AA-A236-E0EB18504A2F" name="PAGO">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>5664A5D4-08E7-B87B-36C5-08E04EABA3C3</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="idPago" id="12FB6632-8F2C-498E-9759-67866D520A9C">
+<Column name="idPago" id="48003EA1-9CC0-9304-63AD-BE15F536B195">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>8E2DD5DB-FFB7-1004-2ED3-9214EEA67B39</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -20,9 +20,9 @@
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="metodoPago" id="36C7D3D7-7E31-54AE-570C-7BAB49F10E5B">
+<Column name="metodoPago" id="FDA995D4-FCFD-30EC-8066-48A1FFECC628">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>4959B988-0E31-3D5F-5F98-344EDE30620B</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <constraintName>CK_Metodo</constraintName>
@@ -37,9 +37,9 @@
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="monto" id="6DE39A11-9200-44E9-54E9-BAC7E33648FA">
+<Column name="monto" id="82CDF954-E217-92DB-3E57-F3AE5CC35611">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>F22E7B57-C2AE-EA84-C1B0-07E563AB8A04</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -49,9 +49,9 @@
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="estadoTransaccion" id="AC318CBE-9674-4E29-ADFC-FC1F5886A25A">
+<Column name="estadoTransaccion" id="07A397E9-764A-A031-EA4A-24DD06CC52E0">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>F5015C16-429F-9EC6-A4D3-7A205417AF59</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <constraintName>CK_Transaccion</constraintName>
@@ -66,9 +66,9 @@
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="PEDIDO_idPedido" id="ADC32405-C3B7-B7ED-0DBB-3314B86DF1EB">
+<Column name="PEDIDO_idPedido" id="DD62ED20-54F4-00DA-9AE7-975E1D1E74A3">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>193590A9-ABE9-1520-F449-0AB775C7F0CE</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -79,43 +79,43 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="6C95A396-A0BA-8C2F-26BA-9A66B3189B47" referredColumn="A465687D-6F70-0358-E414-B448996BA422"/>
+<colAssociation fkAssociation="0E282FE1-10E1-63C8-CC5E-B9C876CE2102" referredColumn="E3F02DF3-E6FF-BAB7-44FE-0C149BD377AF"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="0DEC5854-0603-B399-D50E-0A68EDBB9CF3" name="PAGO_PK">
+<ind_PK_UK id="04087251-E60E-7D39-66C1-2FF9C2BF1891" name="PAGO_PK">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>3BE9FCA9-7E3E-28CC-9F99-1425BA83E94C</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="12FB6632-8F2C-498E-9759-67866D520A9C"/>
+<colUsage columnID="48003EA1-9CC0-9304-63AD-BE15F536B195"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="DD027916-8A24-89C4-F878-A91855772D60" name="PAGO__IDX">
+<ind_PK_UK id="E935D5F5-0CCB-A89F-E5C8-3F7037060B0D" name="PAGO__IDX">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <relationGeneratorID>D8DB3818-1BA2-5342-9426-B061EA3CA7B4</relationGeneratorID>
 <indexColumnUsage>
-<colUsage columnID="ADC32405-C3B7-B7ED-0DBB-3314B86DF1EB"/>
+<colUsage columnID="DD62ED20-54F4-00DA-9AE7-975E1D1E74A3"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="6737062A-1A5D-66C3-AF35-649A17657DDB" name="PAGO_PEDIDO_FK">
+<ind_PK_UK id="849FAD90-CAFF-BB7C-D85C-5A4EA46BD204" name="PAGO_PEDIDO_FK">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>D8DB3818-1BA2-5342-9426-B061EA3CA7B4</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="ADC32405-C3B7-B7ED-0DBB-3314B86DF1EB"/>
+<colUsage columnID="DD62ED20-54F4-00DA-9AE7-975E1D1E74A3"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

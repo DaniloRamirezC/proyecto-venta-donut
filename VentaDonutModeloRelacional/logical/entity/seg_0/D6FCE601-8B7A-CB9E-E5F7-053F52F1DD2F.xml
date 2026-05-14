@@ -41,7 +41,19 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="iva" id="185AF4CC-B4BC-D81D-CA92-2F84BC077216">
+<Attribute name="montoNeto" id="1A837C0F-AAF4-8120-75F7-FF28C46A37F2">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-14 23:03:17 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="montoIva" id="185AF4CC-B4BC-D81D-CA92-2F84BC077216">
 <createdBy>Asus</createdBy>
 <createdTime>2026-04-29 03:37:08 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
@@ -51,9 +63,7 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="idPago" id="28966EC9-B738-54D7-C9B0-3C6B95F0FCDD">
 <createdBy>Asus</createdBy>
@@ -68,7 +78,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0B23EB2D-94A3-BC17-6D20-227371FCD57C" name="CATEGORIA">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C4F5436C-C267-8C81-F2E7-4337ECC835B2" name="CATEGORIA">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>D7455DEE-C21F-A1BC-9AE6-D82B08BE4809</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="idCategoria" id="0C48E603-2194-7578-1E84-7AC6F53A09FA">
+<Column name="idCategoria" id="C1DD76B9-F861-D7D0-D498-1AD6B9E2F389">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>CABBDE17-DD37-FCB1-B3E1-965248B49C68</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -20,9 +20,9 @@
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nombre" id="76733FD9-891B-4F3D-9630-128A95541013">
+<Column name="nombre" id="05E0A6FA-C4EC-DF74-F501-F8A0E5FF460A">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>5570A6D9-1186-5C18-0FC1-063F5ECD3C2E</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -34,16 +34,16 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="349644AB-5A67-8F61-651C-333C35863824" name="CATEGORIA_PK">
+<ind_PK_UK id="73E1DD99-4D96-A69A-6BF5-D3ABE79B1B9D" name="CATEGORIA_PK">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>64A25F32-225B-9934-23A3-439E8DF22FF8</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="0C48E603-2194-7578-1E84-7AC6F53A09FA"/>
+<colUsage columnID="C1DD76B9-F861-D7D0-D498-1AD6B9E2F389"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

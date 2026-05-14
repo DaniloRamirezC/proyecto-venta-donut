@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CD887BE8-8250-97D1-819D-B5513763959E" name="DONUT">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="11C6D9D3-753F-2B57-D50C-821A011BEDB3" name="DONUT">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 23:03:38 UTC</createdTime>
 <generatorID>CE4CE983-F9F5-7BC8-CB5F-0687DC0F1650</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="idDonut" id="B7EBBF02-9EAC-4D55-9157-6E127ACF9B9B">
+<Column name="idDonut" id="A8931FE1-44C4-A21B-314A-4360CADC2725">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 23:03:38 UTC</createdTime>
 <generatorID>DE2FE8F9-8BB9-A2BE-B87C-6C5A835AB667</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -20,9 +20,9 @@
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nomDonut" id="F9923FC4-A84C-D1D3-EEA7-33C2E32E65E5">
+<Column name="nomDonut" id="1F9D6561-E397-A5DD-DDD3-CEC8EED77555">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 23:03:38 UTC</createdTime>
 <generatorID>34DE1583-5625-038E-7F1D-04125DD51CD2</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -32,9 +32,9 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="descripcion" id="CFBF7AED-E119-F3A9-C6B6-1FF70BB728A1">
+<Column name="descripcion" id="C5BB876F-C13C-A2C0-D291-9B8F9406579B">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 23:03:38 UTC</createdTime>
 <generatorID>4D9044A8-A53A-B131-5917-2B12D24D7364</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -44,9 +44,9 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="precioU" id="8CD5A9D0-D5E3-EF2F-F0CE-6CE312987F43">
+<Column name="precioU" id="875A3A38-8969-0243-503E-52D114248289">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 23:03:38 UTC</createdTime>
 <generatorID>5E7B45D3-0EAC-411F-039D-EE174FE45C93</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -56,9 +56,9 @@
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="stock" id="5FAFE16C-1C1A-7365-DDA2-1E73A886D9DA">
+<Column name="stock" id="F349DE9C-6416-43A4-D1A2-87EA28F5F6AB">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 23:03:38 UTC</createdTime>
 <generatorID>99296EA9-6E03-01EC-C3B9-0D8D0419A9EC</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -68,9 +68,9 @@
 <ownDataTypeParameters>,8,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CATEGORIA_idCategoria" id="6080CDAA-79E2-38C2-AC4A-6A4331698C56">
+<Column name="CATEGORIA_idCategoria" id="B240FB04-A615-349F-E0A0-CA6EDFE6128E">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 23:03:38 UTC</createdTime>
 <generatorID>F083660D-7545-E804-0482-C6BCB3270548</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -81,32 +81,32 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="5F90124F-0AC6-5DCA-DE39-BECC81C6A2DA" referredColumn="0C48E603-2194-7578-1E84-7AC6F53A09FA"/>
+<colAssociation fkAssociation="4B14AEDA-3C42-D1D2-D413-26FDE7882526" referredColumn="7856E8F0-7281-9DCF-A189-0D40C04C5127"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="3C59215A-E437-1E6B-F2B7-7822271400AF" name="DONUT_PK">
+<ind_PK_UK id="D92EDC0D-CCD1-EDA5-AAB4-C7176C343B8C" name="DONUT_PK">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 23:03:38 UTC</createdTime>
 <generatorID>60FEF2C5-0446-6012-0625-7D78B032C7F9</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="B7EBBF02-9EAC-4D55-9157-6E127ACF9B9B"/>
+<colUsage columnID="A8931FE1-44C4-A21B-314A-4360CADC2725"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="10FFF616-EE30-5892-1432-D5E852E4C9FE" name="DONUT_CATEGORIA_FK">
+<ind_PK_UK id="CA485A93-31E6-0F7D-6466-E2AD2753743C" name="DONUT_CATEGORIA_FK">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 23:03:38 UTC</createdTime>
 <generatorID>6966FBEC-1389-DC4F-6653-9FAF26AB150C</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="6080CDAA-79E2-38C2-AC4A-6A4331698C56"/>
+<colUsage columnID="B240FB04-A615-349F-E0A0-CA6EDFE6128E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

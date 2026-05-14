@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7B86C998-72B2-D100-AA3C-29137E973448" name="DESPACHO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4CDE52F4-1D9B-36F4-9C50-AC174B372DEC" name="DESPACHO">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>76D2B397-B3D0-8346-028F-0B0806FC4855</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="idEntrega" id="7125E797-85F0-A8F3-80A9-FC5DFD0709DF">
+<Column name="idEntrega" id="74D9946E-7CA9-5E29-C0F5-B9D18EDA1A93">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>529B7CC3-2C6C-FDC8-7231-DD1B5523890C</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -20,9 +20,9 @@
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="repartidor" id="18731CF0-7659-9604-76C5-E33C293196D1">
+<Column name="repartidor" id="8090BDFC-CF33-C399-79E3-F7A4CC89B9BC">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>6743AE96-2F0F-1480-692A-BA3210CC695C</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -32,9 +32,9 @@
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="estado" id="3BCA0515-A05D-17C4-B96C-4CFE19DDDE99">
+<Column name="estado" id="D6EA102F-2451-F4DD-684A-CA5AB242C509">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>C22383F9-7BF3-4F74-BF55-31CCFF6C2AFB</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -44,9 +44,9 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="PEDIDO_idPedido" id="CCDAE162-74B9-05BF-59B5-0EA8A7A8C7D3">
+<Column name="PEDIDO_idPedido" id="BD2D56A4-83EB-B275-0F23-6F28CC1FDAB8">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>7AC9EAA8-BE84-7834-3609-1B9A7CFEB297</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -57,43 +57,43 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="B2AACDE9-6FCB-EBE9-677D-5BDC65ACC1F3" referredColumn="A465687D-6F70-0358-E414-B448996BA422"/>
+<colAssociation fkAssociation="E7EA758E-59A2-9BE0-43FA-E608B5FB2A6C" referredColumn="E3F02DF3-E6FF-BAB7-44FE-0C149BD377AF"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="4A59E241-2D30-B9FC-3893-B305AAB5E284" name="DESPACHO_PK">
+<ind_PK_UK id="250ED919-02C5-0B70-6BFA-62AD07188982" name="DESPACHO_PK">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>905DC12C-98D0-67AF-3953-4EC1C0A4816E</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="7125E797-85F0-A8F3-80A9-FC5DFD0709DF"/>
+<colUsage columnID="74D9946E-7CA9-5E29-C0F5-B9D18EDA1A93"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="828DD030-E0AA-54D2-F969-EB5177908507" name="DESPACHO__IDX">
+<ind_PK_UK id="0C9911A7-F467-EEB7-CBFF-D718ED671F97" name="DESPACHO__IDX">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <relationGeneratorID>FB5C87F9-D700-7F18-9CB7-CAA4CDEFA75E</relationGeneratorID>
 <indexColumnUsage>
-<colUsage columnID="CCDAE162-74B9-05BF-59B5-0EA8A7A8C7D3"/>
+<colUsage columnID="BD2D56A4-83EB-B275-0F23-6F28CC1FDAB8"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="6D50A031-A194-6667-9B82-8202ADF08469" name="DESPACHO_PEDIDO_FK">
+<ind_PK_UK id="6344FA48-67C0-02B9-3C11-C0C020F00876" name="DESPACHO_PEDIDO_FK">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-03 02:46:11 UTC</createdTime>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
 <generatorID>FB5C87F9-D700-7F18-9CB7-CAA4CDEFA75E</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="CCDAE162-74B9-05BF-59B5-0EA8A7A8C7D3"/>
+<colUsage columnID="BD2D56A4-83EB-B275-0F23-6F28CC1FDAB8"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

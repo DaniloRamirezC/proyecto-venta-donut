@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0E282FE1-10E1-63C8-CC5E-B9C876CE2102" containerWithKeyObject="8A78939E-2C4B-94AA-A236-E0EB18504A2F" localFKIndex="849FAD90-CAFF-BB7C-D85C-5A4EA46BD204" name="PAGO_PEDIDO_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-14 22:59:12 UTC</createdTime>
+<generatorID>D8DB3818-1BA2-5342-9426-B061EA3CA7B4</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<referredTableLongName>PEDIDO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1FF93189-F71E-74DC-B093-FD07E06666EC</referredTableID>
+<keyObject>9F318C55-6219-E346-C4E5-BFEBA0822B36</keyObject>
+<referredKeyID>9F318C55-6219-E346-C4E5-BFEBA0822B36</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>idPedido</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
