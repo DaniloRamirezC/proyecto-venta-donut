@@ -3,6 +3,8 @@ package com.donutin.servicio_pedido.model;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,6 +33,7 @@ public class Pedido
     private LocalDate fechaPedido;
 
     private Long clienteId; //Referencia lógica al otro microservicio (servicio-cliente)
+    @JsonManagedReference
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL) // Relacion 1:N
     private List<DetallePedido> detallePedido;
 }
