@@ -53,6 +53,7 @@ public class GestionService
         {
             for (DetallePedido detalle : pedido.getDetallePedido()) {
                 detalle.setPedido(pedido);
+                enriquecerConDonut(detalle);
             }
         }
         return pedidoRepository.save(pedido);
