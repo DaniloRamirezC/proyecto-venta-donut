@@ -21,10 +21,10 @@ public interface DonutRepository extends JpaRepository<Donut, Long>
         List<Donut> buscarDonasPorCategoria(Long idCategoria);
     
     @Query("""
-            SELECT d.Categoria.nombre as nomCategoria,
+            SELECT d.categoria.nombre as nomCategoria,
             COUNT(d) as cantidad
             FROM Donut d
-            GROUP BY d.Categoria.nombre
+            GROUP BY d.categoria.nombre
             """)
         List<Object[]> conteoPorNombreCategoria();
     
