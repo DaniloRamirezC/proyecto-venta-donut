@@ -49,6 +49,12 @@ public class GestionService
     // Para Pedido
     public Pedido guardarPedido(Pedido pedido)
     {
+        if(pedido.getDetallePedido()!=null)
+        {
+            for (DetallePedido detalle : pedido.getDetallePedido()) {
+                detalle.setPedido(pedido);
+            }
+        }
         return pedidoRepository.save(pedido);
     }
     public List<Pedido> listarPedidos()
