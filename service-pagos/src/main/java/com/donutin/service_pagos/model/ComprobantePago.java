@@ -1,5 +1,7 @@
 package com.donutin.service_pagos.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,6 +32,7 @@ public class ComprobantePago {
     
     @OneToOne
     @JoinColumn(name = "IdPago")
+    @JsonBackReference
     private Pago pago;
 
 }

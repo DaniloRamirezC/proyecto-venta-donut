@@ -20,7 +20,11 @@ public class PagosService {
     private ComprobantePagoRepository comprobantePagoRepository;
 
     // Metodos de Pago
-    public Pago guardarPago(Pago pago){
+    public Pago guardarPago(Pago pago) {
+        if (pago.getComprobantePago() != null) {
+            pago.getComprobantePago().setPago(pago);
+        }
+
         Pago guardado = pagoRepository.save(pago);
         return enriquecerConPedido(guardado);
     }
