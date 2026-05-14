@@ -10,7 +10,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +22,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ComprobantePago {
+
+    public static final double IVA = 1.19;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idComprobante;
@@ -28,7 +33,15 @@ public class ComprobantePago {
     @Column(nullable = false, length = 50)
     private String detalle;
 
-    private Double IVA = 1.19;
+    @NotNull(message = "El monto no puede ser nulo")
+    @Min(value = 0, message = "La cantidad no puede ser negativa")
+    @Column(nullable = false)
+    private Integer montoNeto;
+
+    @NotNull(message = "El monto no puede ser nulo")
+    @Min(value = 0, message = "La cantidad no puede ser negativa")
+    @Column(nullable = false)
+    private Integer montoIva;
     
     @OneToOne
     @JoinColumn(name = "IdPago")
