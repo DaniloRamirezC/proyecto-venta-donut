@@ -20,7 +20,23 @@ public class PagosService {
     private ComprobantePagoRepository comprobantePagoRepository;
 
     // Metodos de Pago
-    public Pago guardarPago(Pago pago){
+    public Pago guardarPago(Pago pago) {
+        if (pago.getComprobantePago() != null) {
+            pago.getComprobantePago().setPago(pago);
+        
+            int totalBruto = pago.getMonto(); 
+
+        // Calcular Monto Neto (Total / 1.19)
+            double neto = totalBruto / ComprobantePago.IVA;
+            int netoRedondeado = (int) Math.round(neto);
+
+        // Calcular solo el valor del IVA (Diferencia)
+            int soloIva = totalBruto - netoRedondeado;
+
+            pago.getComprobantePago().setMontoNeto(netoRedondeado);
+            pago.getComprobantePago().setMontoIva(soloIva);
+        }
+
         Pago guardado = pagoRepository.save(pago);
         return enriquecerConPedido(guardado);
     }

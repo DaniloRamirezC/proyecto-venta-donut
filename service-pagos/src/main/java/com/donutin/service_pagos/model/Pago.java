@@ -1,5 +1,7 @@
 package com.donutin.service_pagos.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -35,7 +37,7 @@ public class Pago {
     @Column(nullable = false)
     private Integer monto;
 
-    @NotBlank(message = "Estado transaccion no puede estar vacío")
+    @NotNull(message = "Estado transaccion no puede estar vacío")
     @Column(nullable = false)
     private Boolean estadoTransaccion;
     
@@ -44,7 +46,9 @@ public class Pago {
     @Transient
     private Object datosPedido; 
 
+
     @OneToOne(mappedBy = "pago", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private ComprobantePago comprobantePago;
 
     
