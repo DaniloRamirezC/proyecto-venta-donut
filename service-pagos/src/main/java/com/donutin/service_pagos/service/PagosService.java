@@ -27,7 +27,7 @@ public class PagosService {
             int totalBruto = pago.getMonto(); 
 
         // Calcular Monto Neto (Total / 1.19)
-            double neto = totalBruto / pago.getComprobantePago().getIva();
+            double neto = totalBruto / pago.getComprobantePago().getIVA();
             int netoRedondeado = (int) Math.round(neto);
 
         // Calcular solo el valor del IVA (Diferencia)

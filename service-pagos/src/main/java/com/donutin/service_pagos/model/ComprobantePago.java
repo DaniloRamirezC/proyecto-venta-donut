@@ -48,5 +48,5 @@ public class ComprobantePago {
     private Pago pago;
 
     @Transient
-    private Double iva = 1.19;
+    private Double IVA = 1.19;
 }
