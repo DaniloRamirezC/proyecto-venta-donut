@@ -53,10 +53,18 @@ public class GestionService
         {
             for (DetallePedido detalle : pedido.getDetallePedido()) {
                 detalle.setPedido(pedido);
+            }
+        }
+
+        Pedido guardado = pedidoRepository.save(pedido);
+
+        if(guardado.getDetallePedido()!=null)
+        {
+            for (DetallePedido detalle : guardado.getDetallePedido()) {
                 enriquecerConDonut(detalle);
             }
         }
-        return pedidoRepository.save(pedido);
+        return guardado;
     }
     public List<Pedido> listarPedidos()
     {
