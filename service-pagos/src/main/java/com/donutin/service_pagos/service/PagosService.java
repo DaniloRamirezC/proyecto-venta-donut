@@ -27,7 +27,7 @@ public class PagosService {
             int totalBruto = pago.getMonto(); 
 
         // Calcular Monto Neto (Total / 1.19)
-            double neto = totalBruto / ComprobantePago.IVA;
+            double neto = totalBruto / pago.getComprobantePago().getIVA();
             int netoRedondeado = (int) Math.round(neto);
 
         // Calcular solo el valor del IVA (Diferencia)
@@ -74,7 +74,7 @@ public class PagosService {
             try{
                 Object pedido = webClientBuilder.build()
                 .get()
-                .uri("http://localhost:8083/pedido/" + pago.getPedidoId())
+                .uri("http://localhost:8083/api/v1/pedidos/" + pago.getPedidoId())
                 .retrieve()
                 .bodyToMono(Object.class)
                 .block();
