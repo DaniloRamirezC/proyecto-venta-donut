@@ -3,7 +3,9 @@ package com.donutin.servicio_pedido.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +28,20 @@ public class PedidoController
     {
         return gestionService.listarPedidos();
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Pedido> obtenerPorId(@PathVariable Long id)
+    {
+        Pedido pedido = gestionService.obtenerPedidoPorId(id);
+        if(pedido!=null)
+        {
+            return ResponseEntity.ok(pedido);
+        }
+        else{
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @PostMapping 
     public Pedido crearPedido(@Valid @RequestBody Pedido pedido)
     {

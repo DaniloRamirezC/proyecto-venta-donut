@@ -71,6 +71,19 @@ public class GestionService
         return pedidoRepository.findAll();
     }
 
+    public Pedido obtenerPedidoPorId(Long id)
+    {
+        Pedido pedido = pedidoRepository.findById(id).orElse(null);
+
+        if(pedido!=null && pedido.getDetallePedido()!=null)
+        {
+            for (DetallePedido detalle : pedido.getDetallePedido()) {
+                enriquecerConDonut(detalle);
+            }
+        }
+        return pedido;
+    }
+
     //Método para evitar repetir código
     private DetallePedido enriquecerConDonut(DetallePedido detallePedido)
     {
