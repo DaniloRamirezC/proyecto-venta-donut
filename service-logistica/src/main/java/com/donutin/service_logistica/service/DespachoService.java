@@ -50,7 +50,7 @@ public class DespachoService {
             try{
                 Object pedido = webClientBuilder.build()
                 .get()
-                .uri("http://localhost:8083/pedido/" + despacho.getPedidoId())
+                .uri("http://localhost:8083/api/v1/pedidos/" + despacho.getPedidoId())
                 .retrieve()
                 .bodyToMono(Object.class)
                 .block();
