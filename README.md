@@ -52,9 +52,8 @@ Para crear este proyecto, necesitas:
     "descripción": "Brocheta Donutin con 4 deliciosas mini donuts"
     "precioUnitario": 1000
     "stock": 40
-    "categoría”: {
-        "idCategoria":1,
-        "nombre": "Vegano"
+    "categoría": {
+        "idCategoria":1
           }
 }
 ```
@@ -69,15 +68,6 @@ Para crear este proyecto, necesitas:
     "dirección": "Avda Pajaritos 6350" 
 }
 ```
-### Crear un Detalle de pedido (POST)
-**URL:** `http://localhost:8080/api/v1/pedidos/detalles`
-```json
-{
-    "cantidad": 5,
-    "donutId": 1
-}
-```
-
 ### Crear un Pedido (POST)
 **URL:** `http://localhost:8080/api/v1/pedidos`
 ```json
@@ -92,7 +82,6 @@ Para crear este proyecto, necesitas:
     ]
 }
 ```
-
 ### Crear un Pago (POST)
 **URL:** `http://localhost:8080/api/v1/pagos`
 ```json
@@ -106,14 +95,26 @@ Para crear este proyecto, necesitas:
     	}
 }
 ```
-
 ### Crear un Despacho (POST)
 **URL:** `http://localhost:8080/api/v1/despachos`
 ```json
 {
-    "repartidor": "Carlos Moreno"
-	  "estado": "En preparación"
-	  "pedidoId": 5
+    "repartidor": "Carlos Moreno",
+    "estado": "En preparación",
+    "pedidoId": 9,
+	"clienteId": 5
+}
+```
+### Actualizar el estado del Despacho (PUT)
+**URL:** `http://localhost:8080/api/v1/despachos/1/estado?nuevoEstado=Entregado` <--- Se agrega el nuevo estado
+```diff
+{
+	"idDespacho": 1,
+	"repartidor": "Carlos Moreno",
+-   "estado": "En preparación",
++   "estado": "Entregado", 
+    "pedidoId": 8,
+	"clienteId": 4
 }
 ```
 
