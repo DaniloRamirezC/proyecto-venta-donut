@@ -30,6 +30,11 @@ public class Despacho {
 
     private Long pedidoId; //Referencia lógica al microservicio servicio-pedido
 
+    private Long clienteId; //Referencia lógica al microservicio servicio-clientes
+
     @Transient
     private Object datosPedido;
+
+    @Transient
+    private Object datosCliente;
 }

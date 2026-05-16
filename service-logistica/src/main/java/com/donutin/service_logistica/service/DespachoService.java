@@ -38,9 +38,9 @@ public class DespachoService {
         Despacho despacho = despachoRepository.findById(id).orElse(null);
 
         if (despacho != null) {
-        despacho.setEstado(nuevoEstado);
-        Despacho actualizado = despachoRepository.save(despacho);
-        return enriquecerConPedido(actualizado);
+            despacho.setEstado(nuevoEstado);
+            Despacho actualizado = despachoRepository.save(despacho);
+            return enriquecerConPedido(actualizado);
         }
         return null;
     }
@@ -59,8 +59,21 @@ public class DespachoService {
                 despacho.setDatosPedido("Informacion de pedido no disponible");
             }
         }
-        return despacho;
-    }
+        
+        if (despacho.getClienteId() != null) {
+            try {
+                Object cliente = webClientBuilder.build()
+                .get()
+                .uri("http://localhost:8082/clientes/" + despacho.getClienteId())
+                .retrieve()
+                .bodyToMono(Object.class)
+                .block();
+            despacho.setDatosCliente(cliente);
+            } catch (Exception e) {
+                despacho.setDatosCliente("Información de cliente no disponible");
+            }
+        }
 
-    
+        return despacho;
+    }  
 }
