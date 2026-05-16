@@ -117,6 +117,16 @@ Para crear este proyecto, necesitas:
 	"clienteId": 4
 }
 ```
+### Obtener el conteo por Categoría (GET)
+**URL:** `http://localhost:8080/donuts/conteo-categoria`
+```json
+[
+    [
+        "Vegano",
+        2
+    ]
+]
+```
 
 ### 6. Modelos relacionales
 Se encuentran en la carpeta VentaDonutModeloRelacional/ y archivo VentaDonutModeloRelacional.dmd, estos dos documentos se deben abrir en DataModeler de Oracle
