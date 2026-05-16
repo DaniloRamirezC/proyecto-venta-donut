@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
+import com.donutin.service_catalogo.model.Categoria;
 import com.donutin.service_catalogo.model.Donut;
+import com.donutin.service_catalogo.repository.CategoriaRepository;
 import com.donutin.service_catalogo.repository.DonutRepository;
 
 import jakarta.transaction.Transactional;
@@ -19,6 +21,10 @@ public class DonutService
 {
     @Autowired
     private DonutRepository donutRepository;
+
+    @Autowired
+    private CategoriaRepository categoriaRepository;
+
     public List<Donut> listarTodos()
     {
         return donutRepository.findAll();
@@ -30,6 +36,11 @@ public class DonutService
     @Transactional
     public Donut guardar(@Valid Donut donut)
     {
+        if(donut.getCategoria()!=null && donut.getCategoria().getIdCategoria()!=null)
+        {
+            Categoria categoriaCompleta = categoriaRepository.findById(donut.getCategoria().getIdCategoria()).orElse(null);
+            donut.setCategoria(categoriaCompleta);
+        }
         return donutRepository.save(donut);
     }
     public void eliminar(Long id)
