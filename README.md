@@ -48,11 +48,11 @@ Para crear este proyecto, necesitas:
 **URL:** `http://localhost:8080/donuts`
 ```json
 {
-    "nombreDonut": "Brocheta Donutin"
-    "descripción": "Brocheta Donutin con 4 deliciosas mini donuts"
-    "precioUnitario": 1000
-    "stock": 40
-    "categoría": {
+    "nombreDonut": "Brocheta Donutin",
+    "descripcion": "Brocheta Donutin con 4 deliciosas mini donuts",
+    "precioUnitario": 1000,
+    "stock": 40,
+    "categoria": {
         "idCategoria":1
           }
 }
@@ -64,16 +64,16 @@ Para crear este proyecto, necesitas:
     "rutCliente": "12345678-9",
     "nombreCliente": "Juan",
     "apellidoCliente": "Perez",
-    "email": "jperez@gmail.com"
-    "dirección": "Avda Pajaritos 6350" 
+    "email": "jperez@gmail.com",
+    "direccion": "Avda Pajaritos 6350" 
 }
 ```
 ### Crear un Pedido (POST)
 **URL:** `http://localhost:8080/api/v1/pedidos`
 ```json
 {
-    "fechaPedido": "2026-05-04"
-    "clienteId": 1
+    "fechaPedido": "2026-05-04",
+    "clienteId": 1,
     "detallePedido": [
     {
         "cantidad": 5,
