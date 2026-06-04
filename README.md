@@ -2,6 +2,10 @@
 
 Proyecto desarrollado con **Spring Boot** para la gestión integral de un servicio de venta de donuts, utilizando una arquitectura de microservicios desacoplados.
 
+### Integrantes del proyecto
+- Benjamín González
+- Danilo Ramírez
+
 ### 1. Microservicios y puertos
 | Microservicio | Responsabilidad | Puerto  | Base de Datos | Tablas |
 | :---          | :---            | :---    | :---          | :---   |
@@ -129,4 +133,4 @@ Para crear este proyecto, necesitas:
 ```
 
 ### 6. Modelos relacionales
-Se encuentran en la carpeta VentaDonutModeloRelacional/ y archivo VentaDonutModeloRelacional.dmd, estos dos documentos se deben abrir en DataModeler de Oracle
+Los archivos VentaDonutModeloRelacional/ y VentaDonutModeloRelacional.dmd se encuentran en la carpeta Modelo Relacional Proyecto, el archivo .dmd se abre en Oracle DataModeler. Estos archivos **DEBEN** estar juntos para su funcionamiento en Data Modeler.
