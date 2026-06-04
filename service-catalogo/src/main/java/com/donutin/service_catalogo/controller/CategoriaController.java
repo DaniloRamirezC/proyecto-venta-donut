@@ -14,7 +14,7 @@ import com.donutin.service_catalogo.repository.CategoriaRepository;
 
 
 @RestController
-@RequestMapping("/donuts/tipos")
+@RequestMapping("/api/v1/tipos")
 public class CategoriaController 
 {
     @Autowired

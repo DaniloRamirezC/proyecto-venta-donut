@@ -18,7 +18,7 @@ import com.donutin.service_catalogo.service.DonutService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/donuts")
+@RequestMapping("/api/v1/donuts")
 public class DonutController 
 {
     @Autowired
