@@ -1,5 +1,6 @@
 package com.donutin.service_catalogo.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,28 +21,34 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Schema(description = "Modelo que representa a una donut en el sistema")
 public class Donut 
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "ID único autoincremental", example = "1")
     private Long id;
 
     @NotBlank(message = "El nombre no puede estar vacío")
     @Column(nullable = false, length = 100)
+    @Schema(description = "Nombre de la donut", example = "Donut chocolate")
     private String nombreDonut;
 
     @NotBlank(message = "La descripción no puede estar vacía")
     @Column(nullable = false, length = 100)
+    @Schema(description = "Descripción de la donut", example = "Donut cubierta de chocolate")
     private String descripcion;
 
     @NotNull(message = "El precio no puede ser nulo")
     @Min(value = 1, message = "El precio debe ser mayor a 0")
     @Column(nullable = false)
+    @Schema(description = "Precio entero de la donut sin signo peso", example = "2990")
     private Integer precioUnitario;
 
     @NotNull(message = "El stock no puede ser nulo")
     @Min(value = 0, message = "El stock no puede ser negativo")
     @Column(nullable = false)
+    @Schema(description = "Cantidad de productos guardados en la empresa", example = "50")
     private Integer stock;
 
     @NotNull(message = "La categoría no puede ser nula")

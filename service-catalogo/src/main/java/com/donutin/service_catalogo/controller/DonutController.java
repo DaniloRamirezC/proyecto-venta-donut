@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,15 +16,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.donutin.service_catalogo.model.Donut;
 import com.donutin.service_catalogo.service.DonutService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/donuts")
+@Tag(name = "Donuts", description = "Operaciones relacionadas con la gestión de las donuts")
+@CrossOrigin(origins = "*") //Permite que Swagger lo llame desde cualquier puerto
 public class DonutController 
 {
     @Autowired
     private DonutService donutService;
-
+    @Operation(summary = "Obtener todas las donuts", description = "Retorna una lista completa de donuts registradas")
     @GetMapping
     public List<Donut> listar()
     {
@@ -65,7 +70,8 @@ public class DonutController
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(donaStock);
-    } 
+    }
+    @Operation(summary = "Crear una nueva donut", description = "Guardar una donut en la base de datos bd_catalogo") 
     @PostMapping
     public ResponseEntity<Donut> crear(@Valid @RequestBody Donut donut)
     {
