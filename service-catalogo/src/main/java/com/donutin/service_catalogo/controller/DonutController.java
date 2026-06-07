@@ -13,10 +13,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.donutin.service_catalogo.exception.ErrorResponse;
 import com.donutin.service_catalogo.model.Donut;
 import com.donutin.service_catalogo.service.DonutService;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
@@ -28,18 +33,24 @@ public class DonutController
 {
     @Autowired
     private DonutService donutService;
+    
     @Operation(summary = "Obtener todas las donuts", description = "Retorna una lista completa de donuts registradas")
     @GetMapping
     public List<Donut> listar()
     {
         return donutService.listarTodos();
     }
+    @Operation(summary = "Obtener por ID")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Donut encontrada"),
+        @ApiResponse(responseCode = "404", description = "No existe la donut que busca", content = @Content(schema = @Schema(implementation = ErrorResponse.class)))
+    })
     @GetMapping("/{id}")
     public ResponseEntity<Donut> obtenerPorId(@PathVariable Long id)
     {
         return donutService.buscarPorId(id)
                 .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+                .orElseThrow(() -> new RuntimeException("Donut no encontrada"));
     }
     @GetMapping("/categoria/{id}")
     public ResponseEntity<List<Donut>> buscarPorCategoria(@PathVariable Long id)
