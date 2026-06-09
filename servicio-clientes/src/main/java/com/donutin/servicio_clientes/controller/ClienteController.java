@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,13 +16,18 @@ import org.springframework.web.bind.annotation.RestController;
 import com.donutin.servicio_clientes.model.Cliente;
 import com.donutin.servicio_clientes.service.ClienteService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
-@RequestMapping("/clientes")
+@RequestMapping("api/v1/clientes")
+@Tag(name = "Clientes", description = "Operaciones relacionadas con la gestión de clientes")
+@CrossOrigin(origins = "*")
 public class ClienteController 
 {
     @Autowired
     private ClienteService clienteService;
-
+    @Operation(summary = "Obtener todos los clientes", description = "Retorna una lista completa de clientes registrados")
     @GetMapping
     public List<Cliente> listar()
     {
