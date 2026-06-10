@@ -5,6 +5,7 @@ import com.donutin.servicio_pedido.model.DetallePedido;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.donutin.servicio_pedido.service.GestionService;
 
 @RestController
-@RequestMapping("/api/v1/pedidos/detalles")
+@RequestMapping("/api/v1/detalles")
+@CrossOrigin(origins = "*")
 public class DetallePedidoController 
 {
     @Autowired

@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,6 +24,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Schema(description = "Modelo que representa la gestión de los pedidos")
 public class Pedido 
 {
     @Id
@@ -32,6 +34,7 @@ public class Pedido
     @PastOrPresent(message = "La fecha del pedido no puede ser futura")
     private LocalDate fechaPedido;
 
+    @Schema(description = "Id del cliente (referencia al microservicio servicio-cliente)")
     private Long clienteId; //Referencia lógica al otro microservicio (servicio-cliente)
     @JsonManagedReference
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL) // Relacion 1:N
