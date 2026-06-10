@@ -3,6 +3,7 @@ package com.donutin.service_catalogo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -86,7 +87,8 @@ public class DonutController
     @PostMapping
     public ResponseEntity<Donut> crear(@Valid @RequestBody Donut donut)
     {
-        return ResponseEntity.ok(donutService.guardar(donut));
+        Donut nuevo = donutService.guardar(donut);
+        return new ResponseEntity<>(nuevo, HttpStatus.CREATED);
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id)
