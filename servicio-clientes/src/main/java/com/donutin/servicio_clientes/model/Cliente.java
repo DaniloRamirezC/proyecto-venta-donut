@@ -8,6 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,14 +26,15 @@ public class Cliente
     @Schema(description = "ID único autoincremental", example = "1")
     private Long idCliente;
     
-    @NotBlank(message = "Rut del cliente no puede estar vacío")
+    @NotBlank(message = "El Rut es obligatorio")
+    @Size(min = 9, max = 12,message = "El RUT debe tener entre 9 y 12 caracteres")
     @Column(nullable = false, unique = true)
-    @Schema(description = "RUT del cliente con guión", example = "12345678-9")
+    @Schema(description = "RUT del cliente con guión", example = "12345678-9", requiredMode = Schema.RequiredMode.REQUIRED)
     private String rutCliente;
 
     @NotBlank(message = "El nombre no puede estar vacío")
     @Column(nullable = false, length = 100)
-    @Schema(description = "Nombre completo del cliente", example = "Juan Pedro")
+    @Schema(description = "Nombre completo del cliente", example = "Juan Pedro", requiredMode = Schema.RequiredMode.REQUIRED)
     private String nombreCliente;
 
     @NotBlank(message = "El apellido no puede estar vacío")
