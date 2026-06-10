@@ -1,5 +1,6 @@
 package com.donutin.servicio_pedido.controller;
 
+import com.donutin.servicio_pedido.config.ErrorResponse;
 import com.donutin.servicio_pedido.model.DetallePedido;
 
 import java.util.List;
@@ -15,6 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.donutin.servicio_pedido.service.GestionService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+
 @RestController
 @RequestMapping("/api/v1/detalles")
 @CrossOrigin(origins = "*")
@@ -27,10 +34,20 @@ public class DetallePedidoController
     {
         return gestionService.listarTodo();
     }
+    @Operation(summary = "Obtener por Id")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Detalle de pedido encontrado"),
+        @ApiResponse(responseCode = "400", description = "No existe el detalle que busca", content = @Content(schema = @Schema(implementation = ErrorResponse.class)))
+    })
     @GetMapping("/{id}")
     public DetallePedido verDetallePedido(@PathVariable Long id)
     {
-        return gestionService.obtenerDetallePedidoCompleto(id);
+        DetallePedido detalle = gestionService.obtenerDetallePedidoCompleto(id);
+        if(detalle == null)
+        {
+            throw new RuntimeException("Detalle de pedido no encontrado");
+        }
+        return detalle;
     } 
     @PostMapping   
     public DetallePedido crearDetalle(@RequestBody DetallePedido detallePedido)
