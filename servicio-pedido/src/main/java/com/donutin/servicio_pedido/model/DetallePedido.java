@@ -47,4 +47,8 @@ public class DetallePedido
     @Schema(description = "Datos detallados del pedido. Se cargan en tiempo de ejecución vía WebClient", accessMode = Schema.AccessMode.READ_ONLY)
     @Transient
     private Object datosDonuts; // No existe, se encuentra en otra tabla
+
+    @Schema(description = "Datos detallados de la empresa matriz. Se cargan en tiempo de ejecución vía WebClient", accessMode = Schema.AccessMode.READ_ONLY)
+    @Transient
+    private Object datosEmpresa; // No existe, se encuentra en otra tabla (empresa)
 }
