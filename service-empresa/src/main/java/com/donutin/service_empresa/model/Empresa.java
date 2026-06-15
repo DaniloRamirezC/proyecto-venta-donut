@@ -45,4 +45,12 @@ public class Empresa
     @Column(nullable = false, length = 100)
     @Schema(description = "Dirección de la empresa", example = "Avenida Siempreviva 742")
     private String direccionEmpresa;
+
+    // Para permitir el registro de la empresa Donutin como única evitando crear nuevas empresas
+    @Column(name = "bloqueo_registro",
+            nullable = false,
+            unique = true,
+            updatable = false
+    )
+    private Integer bloqueoRegistro = 1; //Se inicializa por defecto en 1
 }
