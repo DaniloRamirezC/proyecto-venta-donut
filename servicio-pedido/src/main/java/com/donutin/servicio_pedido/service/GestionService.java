@@ -87,6 +87,7 @@ public class GestionService
     //Método para evitar repetir código
     private DetallePedido enriquecerConDonut(DetallePedido detallePedido)
     {
+        //1. Viaje por red a buscar la Donut (puerto 8081)
         if(detallePedido.getDonutId()!=null)
         {
             try {
@@ -100,6 +101,18 @@ public class GestionService
             } catch (Exception e) {
                 detallePedido.setDatosDonuts("Información de donut no disponible");
             }
+        }
+        //2. Viaje por red a buscar la Empresa (puerto 8087)
+        try {
+            Object empresaMatriz = webClientBuilder.build()
+            .get()
+            .uri("http:/localhost:8087/api/v1/empresas/1")
+            .retrieve()
+            .bodyToMono(Object.class)
+            .block();
+        detallePedido.setDatosEmpresa(empresaMatriz);
+        } catch (Exception e) {
+            detallePedido.setDatosEmpresa("Información de la pyme no disponible");
         }
         return detallePedido;
     }
