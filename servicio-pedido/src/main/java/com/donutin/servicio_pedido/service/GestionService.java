@@ -106,7 +106,7 @@ public class GestionService
         try {
             Object empresaMatriz = webClientBuilder.build()
             .get()
-            .uri("http:/localhost:8087/api/v1/empresas/1")
+            .uri("http://localhost:8087/api/v1/empresas/1")
             .retrieve()
             .bodyToMono(Object.class)
             .block();
