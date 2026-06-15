@@ -3,7 +3,6 @@ package com.donutin.service_catalogo.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
@@ -19,11 +18,14 @@ import jakarta.validation.Valid;
 @Validated
 public class DonutService 
 {
-    @Autowired
-    private DonutRepository donutRepository;
+    private final DonutRepository donutRepository;
+    private final CategoriaRepository categoriaRepository;
 
-    @Autowired
-    private CategoriaRepository categoriaRepository;
+    public DonutService(DonutRepository donutRepository, CategoriaRepository categoriaRepository)
+    {
+        this.donutRepository = donutRepository;
+        this.categoriaRepository = categoriaRepository;
+    }
 
     public List<Donut> listarTodos()
     {

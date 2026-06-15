@@ -2,7 +2,6 @@ package com.donutin.service_catalogo.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,8 +18,11 @@ import com.donutin.service_catalogo.repository.CategoriaRepository;
 @CrossOrigin(origins = "*")
 public class CategoriaController 
 {
-    @Autowired
-    private CategoriaRepository categoriaRepository;
+    private final CategoriaRepository categoriaRepository;
+    public CategoriaController(CategoriaRepository categoriaRepository)
+    {
+        this.categoriaRepository = categoriaRepository;
+    }
 
     @GetMapping
     public List<Categoria> listar()

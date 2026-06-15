@@ -2,7 +2,6 @@ package com.donutin.service_catalogo.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -32,8 +31,12 @@ import jakarta.validation.Valid;
 @CrossOrigin(origins = "*") //Permite que Swagger lo llame desde cualquier puerto
 public class DonutController 
 {
-    @Autowired
-    private DonutService donutService;
+    private final DonutService donutService;
+
+    public DonutController(DonutService donutService)
+    {
+        this.donutService = donutService;
+    }
     
     @Operation(summary = "Obtener todas las donuts", description = "Retorna una lista completa de donuts registradas")
     @GetMapping
