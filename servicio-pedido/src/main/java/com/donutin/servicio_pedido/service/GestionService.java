@@ -2,7 +2,6 @@ package com.donutin.servicio_pedido.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -14,12 +13,16 @@ import com.donutin.servicio_pedido.repository.PedidoRepository;
 @Service
 public class GestionService 
 {
-    @Autowired
-    private PedidoRepository pedidoRepository;
-    @Autowired
-    private WebClient.Builder webClientBuilder;
-    @Autowired
-    private DetallePedidoRepository detallePedidoRepository;
+    private final PedidoRepository pedidoRepository;
+    private final WebClient.Builder webClientBuilder;
+    private final DetallePedidoRepository detallePedidoRepository;
+
+    public GestionService(PedidoRepository pedidoRepository, WebClient.Builder webClientBuilder, DetallePedidoRepository detallePedidoRepository)
+    {
+        this.pedidoRepository = pedidoRepository;
+        this.webClientBuilder = webClientBuilder;
+        this.detallePedidoRepository = detallePedidoRepository;
+    }
 
     public DetallePedido guardarDetalle(DetallePedido detallePedido)
     {

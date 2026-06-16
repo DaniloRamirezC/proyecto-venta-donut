@@ -2,7 +2,6 @@ package com.donutin.servicio_pedido.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,8 +27,11 @@ import jakarta.validation.Valid;
 @CrossOrigin(origins = "*")
 public class PedidoController 
 {
-    @Autowired
-    private GestionService gestionService;
+    private final GestionService gestionService;
+    public PedidoController(GestionService gestionService)
+    {
+        this.gestionService = gestionService;
+    }
 
     @GetMapping 
     public List<Pedido> listar()
