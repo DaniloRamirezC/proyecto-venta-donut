@@ -3,12 +3,15 @@ package com.donutin.service_reportes.service;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import com.donutin.service_reportes.model.Reporte;
 import com.donutin.service_reportes.repository.ReporteRepository;
+
+import lombok.NonNull;
 
 @Service
 @SuppressWarnings("unchecked")
@@ -27,7 +30,7 @@ public class ReporteService
         return reporteRepository.findAll();
     }
 
-    public Reporte reporteRendimientoDia(LocalDate fecha)
+    public Reporte crearReporteDia(LocalDate fecha)
     {
         int cantidadPedidosEntregados = 0;
         long totalIngresos=0L;
@@ -57,14 +60,15 @@ public class ReporteService
                         Long idPedido = ((Number) pedidoObj).longValue();
                         Object respuestaLogistica = webClientBuilder.build()
                                 .get()
-                                .uri("http://localhost:8085/api/v1/logistica/pedido" +idPedido)
+                                .uri("http://localhost:8085/api/v1/logistica/pedido/" +idPedido)
                                 .retrieve()
                                 .bodyToMono(Object.class)
                                 .block();
                         if(respuestaLogistica instanceof Map)
                         {
                             Map<String, Object> datosLogistica = (Map<String, Object>) respuestaLogistica;
-                            if("Entregado".equalsIgnoreCase(String.valueOf(datosLogistica.get("estado"))))
+                            Object estadoObject = datosLogistica.get("estado");
+                            if(estadoObject!=null && "Entregado".equalsIgnoreCase(String.valueOf(datosLogistica.get("estado"))))
                             {
                                 cantidadPedidosEntregados++;
                             }
@@ -87,7 +91,8 @@ public class ReporteService
                 List<Map<String, Object>> listaPagos = (List<Map<String, Object>>) respuestaPagos;
                 for(Map<String, Object> pago: listaPagos)
                 {
-                    if("Aprobado".equalsIgnoreCase(String.valueOf(pago.get("estadoTransaccion"))))
+                    Object estadoTransaccObject = pago.get("estadoTransaccion");
+                    if(estadoTransaccObject!=null && "Aprobado".equalsIgnoreCase(String.valueOf(pago.get("estadoTransaccion"))))
                     {
                         Object montoObj = pago.get("monto");
                         if(montoObj instanceof Number)
@@ -107,5 +112,10 @@ public class ReporteService
         reporteDiario.setTotalRecaudado(totalIngresos);
 
         return reporteRepository.save(reporteDiario);
+    }
+
+    public Optional<Reporte> obtenerReportePorId(@NonNull Long id)
+    {
+        return reporteRepository.findById(id);
     }
 }
