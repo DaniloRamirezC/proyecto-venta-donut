@@ -1,6 +1,5 @@
 package com.donutin.service_autenticacion.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,8 +19,11 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @Tag(name = "Autenticacion", description = "Endpoints para registro e inicio de sesión de usuarios")
 public class AutenticacionController 
 {
-    @Autowired
-    private AuthService authService;
+    private final AuthService authService;
+    public AutenticacionController(AuthService authService)
+    {
+        this.authService = authService;
+    }
     @Operation(summary = "Registrar nuevo usuario", description = "Guarda el usuario con contraseña encriptada")
     @PostMapping("/registrar")
     public ResponseEntity<String> registrarUsuario(@RequestBody Usuario usuario)
