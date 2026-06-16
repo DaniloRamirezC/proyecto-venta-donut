@@ -2,7 +2,6 @@ package com.donutin.servicio_clientes.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.ErrorResponse;
@@ -32,8 +31,11 @@ import jakarta.validation.Valid;
 @CrossOrigin(origins = "*")
 public class ClienteController 
 {
-    @Autowired
-    private ClienteService clienteService;
+    private final ClienteService clienteService;
+    public ClienteController(ClienteService clienteService)
+    {
+        this.clienteService = clienteService;
+    }
     @Operation(summary = "Obtener todos los clientes", description = "Retorna una lista completa de clientes registrados")
     @GetMapping
     public List<Cliente> listar()
