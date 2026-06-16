@@ -26,7 +26,8 @@ public class ClienteServiceTest
     private ClienteService clienteService; //Inyectamos el mock en el servicio real
     @Test
     @DisplayName("Debería guardar un cliente correctamente")
-    void guardarClienteTest(){
+    void guardarClienteTest()
+    {
         Cliente cliente = new Cliente();
         cliente.setNombreCliente("Juan");
         cliente.setRutCliente("12345678-9");
@@ -36,11 +37,10 @@ public class ClienteServiceTest
             c.setIdCliente(1L);
             return c;
         });
-
-        Cliente resultado = clienteService.guardar(cliente);
-        assertNotNull(resultado);
-        assertEquals(1L, resultado.getIdCliente());
-        assertEquals("Juan",resultado.getNombreCliente());
-        verify(clienteRepository, times(1)).save(cliente);
+    Cliente resultado = clienteService.guardar(cliente);
+    assertNotNull(resultado);
+    assertEquals(1L, resultado.getIdCliente());
+    assertEquals("Juan",resultado.getNombreCliente());
+    verify(clienteRepository, times(1)).save(cliente);
     }
 }
