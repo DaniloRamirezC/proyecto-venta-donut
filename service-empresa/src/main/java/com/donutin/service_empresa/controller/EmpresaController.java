@@ -1,9 +1,7 @@
 package com.donutin.service_empresa.controller;
 
 import java.util.List;
-import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,13 +28,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/api/v1/empresas")
-@Tag(name = "Empresas", description = "Operaciones relacionadas con la gestión de la pyme")
+@Tag(name = "Empresas", description = "Operaciones relacionadas con la gestión de la empresa")
 @CrossOrigin(origins = "*")
 public class EmpresaController 
 {
-    @Autowired
-    private EmpresaService empresaService;
-    @Operation(summary = "Obtener todas las pyme", description = "Retorna una lista completa de pymes registradas")
+    private final EmpresaService empresaService;
+    public EmpresaController(EmpresaService empresaService)
+    {
+        this.empresaService = empresaService;
+    }
+    @Operation(summary = "Obtener todas las empresas", description = "Retorna una lista completa de empresas registradas")
     @GetMapping
     public List<Empresa> listarTodo() 
     {
@@ -54,7 +55,7 @@ public class EmpresaController
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new RuntimeException("Empresa no encontrada"));
     }
-    @Operation(summary = "Crear una nueva empresa", description = "Guarda la pyme en la bd_empresa")
+    @Operation(summary = "Crear una nueva empresa", description = "Guarda la empresa en la base de datos bd_empresa")
     @PostMapping 
     public ResponseEntity<Empresa> crearEmpresa(@Valid @RequestBody Empresa empresa)
     {

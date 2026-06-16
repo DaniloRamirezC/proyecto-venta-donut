@@ -3,7 +3,6 @@ package com.donutin.service_empresa.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.donutin.service_empresa.model.Empresa;
@@ -12,8 +11,11 @@ import com.donutin.service_empresa.repository.EmpresaRepository;
 @Service
 public class EmpresaService 
 {
-    @Autowired
-    private EmpresaRepository empresaRepository;
+    private final EmpresaRepository empresaRepository;
+    public EmpresaService(EmpresaRepository empresaRepository)
+    {
+        this.empresaRepository = empresaRepository;
+    }
 
     public Optional<Empresa> obtenerPorId(Long id)
     {
