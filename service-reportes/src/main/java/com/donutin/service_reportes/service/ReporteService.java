@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -15,11 +14,13 @@ import com.donutin.service_reportes.repository.ReporteRepository;
 @SuppressWarnings("unchecked")
 public class ReporteService 
 {
-    @Autowired
-    private ReporteRepository reporteRepository;
-
-    @Autowired
-    private WebClient.Builder webClientBuilder;
+    private final ReporteRepository reporteRepository;
+    private final WebClient.Builder webClientBuilder;
+    public ReporteService(ReporteRepository reporteRepository, WebClient.Builder webClientBuilder)
+    {
+        this.reporteRepository = reporteRepository;
+        this.webClientBuilder = webClientBuilder;
+    }
 
     public List<Reporte> listarHistorico()
     {

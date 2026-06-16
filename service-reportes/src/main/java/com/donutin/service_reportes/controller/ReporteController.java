@@ -3,7 +3,6 @@ package com.donutin.service_reportes.controller;
 import java.time.LocalDate;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +18,11 @@ import com.donutin.service_reportes.service.ReporteService;
 @RequestMapping("/api/v1/reportes")
 public class ReporteController 
 {
-    @Autowired
-    private ReporteService reporteService;
+    private final ReporteService reporteService;
+    public ReporteController(ReporteService reporteService)
+    {
+        this.reporteService = reporteService;
+    }
 
     @PostMapping("/publicar")
     public ResponseEntity<Reporte> publicarRendimiento(@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fecha)
