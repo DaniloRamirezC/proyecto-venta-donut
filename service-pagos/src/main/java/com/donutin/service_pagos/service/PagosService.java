@@ -1,7 +1,6 @@
 package com.donutin.service_pagos.service;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -12,12 +11,15 @@ import com.donutin.service_pagos.repository.ComprobantePagoRepository;
 
 @Service
 public class PagosService {
-    @Autowired
-    private PagoRepository pagoRepository;
-    @Autowired
-    private WebClient.Builder webClientBuilder;
-    @Autowired
-    private ComprobantePagoRepository comprobantePagoRepository;
+    private final PagoRepository pagoRepository;
+    private final WebClient.Builder webClientBuilder;
+    private final ComprobantePagoRepository comprobantePagoRepository;
+
+    PagosService(PagoRepository pagoRepository, WebClient.Builder webClientBuilder, ComprobantePagoRepository comprobantePagoRepository) {
+        this.pagoRepository = pagoRepository;
+        this.webClientBuilder = webClientBuilder;
+        this.comprobantePagoRepository = comprobantePagoRepository;
+    }
 
     // Metodos de Pago
     public Pago guardarPago(Pago pago) {
