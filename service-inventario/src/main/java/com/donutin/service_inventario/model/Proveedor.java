@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Entity
-@Table(name = "db_proveedor")
+@Table(name = "proveedor")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

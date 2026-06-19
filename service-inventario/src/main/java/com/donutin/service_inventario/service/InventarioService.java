@@ -1,6 +1,8 @@
 package com.donutin.service_inventario.service;
 
 import java.util.List;
+
+import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import com.donutin.service_inventario.model.Insumo;
 import com.donutin.service_inventario.model.Proveedor;
@@ -9,6 +11,7 @@ import com.donutin.service_inventario.repository.InsumoRepository;
 import com.donutin.service_inventario.repository.ProveedorRepository;
 import com.donutin.service_inventario.repository.RecetaRepository;
 
+@Service
 public class InventarioService {
     private final ProveedorRepository proveedorRepository;
     private final InsumoRepository insumoRepository;

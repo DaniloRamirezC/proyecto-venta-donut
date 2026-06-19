@@ -18,7 +18,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 
 @Entity
-@Table(name = "db_insumo")
+@Table(name = "insumo")
 @Data 
 @AllArgsConstructor 
 @NoArgsConstructor
