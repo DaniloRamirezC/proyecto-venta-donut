@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BC92466A-E628-9CBD-AEB8-F5D1C27785CC" name="CATEGORIA">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>D7455DEE-C21F-A1BC-9AE6-D82B08BE4809</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCategoria" id="F1A346D4-233D-11A3-75DA-36EB5B3F29A9">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>CABBDE17-DD37-FCB1-B3E1-965248B49C68</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="6B523DF9-C256-5C74-7290-D9D5F18AABEF">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>5570A6D9-1186-5C18-0FC1-063F5ECD3C2E</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A50A05FB-B029-2742-C177-FACDA1E803BF" name="CATEGORIA_PK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>64A25F32-225B-9934-23A3-439E8DF22FF8</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F1A346D4-233D-11A3-75DA-36EB5B3F29A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

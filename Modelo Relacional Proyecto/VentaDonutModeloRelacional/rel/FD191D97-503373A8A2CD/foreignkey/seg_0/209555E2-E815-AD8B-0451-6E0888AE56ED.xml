@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="209555E2-E815-AD8B-0451-6E0888AE56ED" containerWithKeyObject="4DC61FAF-F361-4746-443B-8C13A39C03E1" localFKIndex="AB2928B2-FEB9-EAD1-6A98-A6ACACCDEB27" name="RECETA_INSUMO_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>5671FF33-7F54-2662-F70C-6F4D3064F70D</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<referredTableLongName>INSUMO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1B58E587-1EEA-C277-71E7-CEB9A6005183</referredTableID>
+<keyObject>AFE1D08E-92EC-62E3-8E10-3F2B692CBC28</keyObject>
+<referredKeyID>AFE1D08E-92EC-62E3-8E10-3F2B692CBC28</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>idInsumo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

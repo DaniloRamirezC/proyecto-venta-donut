@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F605C8C6-A9BE-645A-5978-51C3D376085C" name="CUPON">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>722FEF16-B04F-C788-0CAF-A53CA2960357</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCupon" id="BE89B8E6-07DF-3442-0021-635CFE6AFA4F">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>12BD881E-0C0B-EF6B-85E2-4AD3F2743414</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="codigo" id="D691E436-65F2-2D90-55B1-3F51EDEE35A2">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>76CD00DE-93A4-6BC2-87EB-1EA26F5DCADC</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="porcentajeDesc" id="6B26C30D-DDAC-18BA-E77F-CF62C9F353F6">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>07A3E78F-658B-AF19-51D6-A93EF9F8DBA4</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="ED917141-0B97-413E-8D68-FC99FFC98818">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>32ABD5ED-4C29-1004-5784-A018DF4959A5</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="26F68978-86EE-5901-E8F6-E1A44B51AC8F" name="CUPON_PK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>2F0F9069-2FD8-2CC7-58C7-EE5891262D4D</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE89B8E6-07DF-3442-0021-635CFE6AFA4F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

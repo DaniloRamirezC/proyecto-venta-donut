@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3B4B84F0-8037-69B4-8209-AD4EFDD7AB1C" name="PEDIDO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F548DF99-2AC9-CB98-4697-B67381531F70" name="EMPRESA">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-28 20:36:51 UTC</createdTime>
+<createdTime>2026-05-28 02:11:52 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="idPedido" id="BEC9A95D-6E5E-36FB-2697-CAF33F247D7E">
+<Attribute name="idEmpresa" id="FFDF177E-4B21-3D8D-22DC-C2B5DB9A324B">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-28 20:53:33 UTC</createdTime>
+<createdTime>2026-05-28 02:12:02 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
@@ -28,74 +28,70 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cliente_id" id="59BEE93A-32A1-5969-1DE9-655582B947EF">
+<Attribute name="rutEmpresa" id="1D24DB60-6B84-C064-E623-315F9E8E12BB">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-28 21:27:34 UTC</createdTime>
+<createdTime>2026-05-28 02:12:28 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fechaPedido" id="6FDFA5D4-F7A7-1679-CE08-8FB63C271EDD">
+<Attribute name="razonSocial" id="94E7BD8F-3373-0300-A820-26C670837CC6">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-28 20:54:02 UTC</createdTime>
+<createdTime>2026-05-28 02:13:49 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="idCliente" id="33AF50EB-0327-5C9F-347A-D6773D1DDA3D">
+<Attribute name="giro" id="F182251C-D035-FE8D-8FAB-DF02DE1E056F">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-29 03:28:20 UTC</createdTime>
-<generatorID>51F08352-408E-AAE8-4B29-E45DA7FC625F</generatorID>
+<createdTime>2026-05-28 02:14:02 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
 </engineerTo>
-<referedAttribute>F26B1CBA-1A68-0FAC-B93A-9B0A329831A1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="idCupon" id="72575BF8-847A-58FA-318B-10EDE12BAA00">
+<Attribute name="direccionEmpresa" id="12A0D55E-18A3-B48D-E71F-593ADD826242">
 <createdBy>Asus</createdBy>
-<createdTime>2026-05-28 02:55:36 UTC</createdTime>
-<generatorID>C2C39883-3DE1-3017-1F35-B919AF4D1E1D</generatorID>
+<createdTime>2026-05-28 02:14:58 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>12BD881E-0C0B-EF6B-85E2-4AD3F2743414</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="8AF16D2C-C303-6362-CF47-82E1C13A8518" name="PEDIDO PK">
+<identifier id="BDCB09F5-080A-06E5-94D6-F6CCDAF0F05E" name="EMPRESA PK">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-28 20:56:11 UTC</createdTime>
+<createdTime>2026-05-28 02:12:26 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>BEC9A95D-6E5E-36FB-2697-CAF33F247D7E</attributeRef>
+<attributeRef>FFDF177E-4B21-3D8D-22DC-C2B5DB9A324B</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

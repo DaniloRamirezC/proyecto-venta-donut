@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2EC91070-CE23-71DB-5368-AFFBF42485D4" containerWithKeyObject="4DC61FAF-F361-4746-443B-8C13A39C03E1" localFKIndex="62FB742F-0A43-9E2D-1B96-E3B5B5C1890F" name="RECETA_DONUT_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>BF002522-6E99-35F8-BCE7-3669A098496B</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<referredTableLongName>DONUT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1E3C4A0C-3AAE-E7CB-127E-8B382A6D418E</referredTableID>
+<keyObject>62D55EA6-63D7-CCC1-3C86-DAA1F2E047FF</keyObject>
+<referredKeyID>62D55EA6-63D7-CCC1-3C86-DAA1F2E047FF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>idDonut</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

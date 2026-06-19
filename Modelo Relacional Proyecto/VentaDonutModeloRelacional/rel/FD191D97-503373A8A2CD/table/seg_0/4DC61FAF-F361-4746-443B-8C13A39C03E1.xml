@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4DC61FAF-F361-4746-443B-8C13A39C03E1" name="RECETA">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>FFA692A5-7844-D09C-F44E-B4164F0DC621</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idReceta" id="73E6C11D-2BAE-C0BE-B7CC-22523A36F067">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>4B81B402-0130-B065-480D-C93A2D54F117</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cantidadNeta" id="5AA21514-F952-B130-CB1E-4BF969C78A48">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>C82208DF-6692-C797-8ADC-30CD347651B2</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,5,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="unidadMedida" id="E97094AE-F105-E79F-0FF9-B9BBEC8CA719">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>1009AAEB-8395-A502-DBEA-61D2A804B65B</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DONUT_idDonut" id="0746A90D-15DC-C353-B795-1E7797645F78">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>3D132048-3517-9FFA-A8D4-7B71513A9528</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2EC91070-CE23-71DB-5368-AFFBF42485D4" referredColumn="5BDD3F3D-ED8F-342A-DB7E-FE033389AA8F"/>
+</associations>
+</Column>
+<Column name="INSUMO_idInsumo" id="42DFAA2A-1ADC-F9AA-91EA-0E2ED7168C9C">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>66C17300-02CA-7164-A1E5-C97C911EA191</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="209555E2-E815-AD8B-0451-6E0888AE56ED" referredColumn="5764BE05-737A-AE5B-992E-20A795233B42"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="74EB578A-492A-0F15-3C47-A41D727DED5A" name="RECETA_PK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>8F4DC49F-014F-0E10-BB21-236AA419846F</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73E6C11D-2BAE-C0BE-B7CC-22523A36F067"/>
+<colUsage columnID="0746A90D-15DC-C353-B795-1E7797645F78"/>
+<colUsage columnID="42DFAA2A-1ADC-F9AA-91EA-0E2ED7168C9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="62FB742F-0A43-9E2D-1B96-E3B5B5C1890F" name="RECETA_DONUT_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>BF002522-6E99-35F8-BCE7-3669A098496B</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0746A90D-15DC-C353-B795-1E7797645F78"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB2928B2-FEB9-EAD1-6A98-A6ACACCDEB27" name="RECETA_INSUMO_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>5671FF33-7F54-2662-F70C-6F4D3064F70D</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42DFAA2A-1ADC-F9AA-91EA-0E2ED7168C9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="270A804E-47E7-92BF-2459-6B1C2393E88F" containerWithKeyObject="1B58E587-1EEA-C277-71E7-CEB9A6005183" localFKIndex="A9BC01CB-25EA-54A7-B436-026633084953" name="INSUMO_PROVEEDOR_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>D94FC09D-36AA-5827-9A61-DE42E8970345</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<referredTableLongName>PROVEEDOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DEDC6CED-1384-C880-AA2B-8ABC993CB47B</referredTableID>
+<keyObject>FF6DD8B3-2FD3-288D-9A7D-C612CB1EC71A</keyObject>
+<referredKeyID>FF6DD8B3-2FD3-288D-9A7D-C612CB1EC71A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>idProveedor</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

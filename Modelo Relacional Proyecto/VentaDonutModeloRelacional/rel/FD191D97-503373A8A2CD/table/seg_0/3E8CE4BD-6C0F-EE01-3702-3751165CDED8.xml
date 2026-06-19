@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3E8CE4BD-6C0F-EE01-3702-3751165CDED8" name="DETALLE_PEDIDO">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>6336E54C-4EE3-2B7B-26C8-D4DE074ADE3D</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idDetalle" id="C798C341-CD0A-A18E-AD3A-0C9D0F3C47A0">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>E203FE81-239C-3CD0-383A-09ACBD86D002</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cantidad" id="583BBB01-834B-D4F8-042E-DA8F5131F007">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>59E72BB9-2650-3FD1-1CCB-D55EAC3AEB4E</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PEDIDO_idPedido" id="A155BD00-072C-AD53-8CF9-FF3FC59A32EC">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>3BEB5D3A-A9FC-F482-FF07-76E489A2FAC4</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="303A2B3A-EA32-D583-D2D1-60EF55DC188A" referredColumn="84619BC1-1697-A184-45B6-7319E9E743B6"/>
+</associations>
+</Column>
+<Column name="DONUT_idDonut" id="18615933-94E9-F32D-E322-5364A55D6721">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>185C7D52-2DA6-8CAD-B625-6F0E7CEFF456</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="785E9429-2EB8-0249-BD21-E44E307ACCC0" referredColumn="5BDD3F3D-ED8F-342A-DB7E-FE033389AA8F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2405E232-9970-9989-FE55-E5C52E29E5AD" name="DETALLE_PEDIDO_PK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>BF6A671D-77B7-9B99-CC86-77B73A3ADFC6</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A155BD00-072C-AD53-8CF9-FF3FC59A32EC"/>
+<colUsage columnID="C798C341-CD0A-A18E-AD3A-0C9D0F3C47A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CAB445F9-8BEF-2963-90EE-EA39C449E42C" name="DETALLE_PEDIDO_DONUT_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>B68277AE-2686-C307-879D-5FC6CEAFE0C2</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="18615933-94E9-F32D-E322-5364A55D6721"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="85078EEC-0FDA-BF8C-3916-A23B971ABD63" name="DETALLE_PEDIDO_PEDIDO_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>304AA6D4-2A0B-6A1C-B9D7-5721E5B61016</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A155BD00-072C-AD53-8CF9-FF3FC59A32EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

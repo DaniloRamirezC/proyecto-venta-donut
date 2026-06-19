@@ -47,8 +47,9 @@
 <createdBy>Asus</createdBy>
 <createdTime>2026-04-28 21:22:18 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

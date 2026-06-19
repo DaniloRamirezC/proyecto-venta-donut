@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="753D6C68-659C-6A48-6452-23098C2C7DAD" containerWithKeyObject="C2818F4A-CDC3-C493-040C-AC585A847EF7" localFKIndex="0BF02E7E-D3C7-282F-6C72-755C4E0BA98C" name="USUARIO_CLIENTE_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>AEE43229-7378-08F3-967F-5022953DE2D0</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<referredTableLongName>CLIENTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7E022D05-5324-9C6C-64DB-AF08931A11B5</referredTableID>
+<keyObject>DBD69153-A02B-9168-86CF-91FE0219CBDD</keyObject>
+<referredKeyID>DBD69153-A02B-9168-86CF-91FE0219CBDD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>idCliente</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

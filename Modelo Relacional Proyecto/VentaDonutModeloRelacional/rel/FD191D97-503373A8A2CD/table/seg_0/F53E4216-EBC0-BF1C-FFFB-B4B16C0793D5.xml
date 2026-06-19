@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F53E4216-EBC0-BF1C-FFFB-B4B16C0793D5" name="PAGO">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>5664A5D4-08E7-B87B-36C5-08E04EABA3C3</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idPago" id="43FAEF04-C160-B261-A2C8-CC177A4E4BFD">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>8E2DD5DB-FFB7-1004-2ED3-9214EEA67B39</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="metodoPago" id="13735A46-CA3D-64E1-6AD2-8C2172B7FC66">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>4959B988-0E31-3D5F-5F98-344EDE30620B</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<constraintName>CK_Metodo</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<listOfValues>
+<valueDef value="Tarjeta" description=""/>
+<valueDef value="Transferencia" description=""/>
+</listOfValues>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="monto" id="9B0BE63C-6989-F32D-C979-D83B01F3A83B">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>F22E7B57-C2AE-EA84-C1B0-07E563AB8A04</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estadoTransaccion" id="4B29F2DB-EBC0-D966-1D0D-407CE18DA319">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>F5015C16-429F-9EC6-A4D3-7A205417AF59</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<constraintName>CK_Transaccion</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<listOfValues>
+<valueDef value="Aprobado" description=""/>
+<valueDef value="Rechazado" description=""/>
+</listOfValues>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PEDIDO_idPedido" id="6F85678A-C844-0A27-0F4A-F5AC53AEC40F">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>193590A9-ABE9-1520-F449-0AB775C7F0CE</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AB54E28B-0A57-B28E-0898-5D329CB7B7D7" referredColumn="84619BC1-1697-A184-45B6-7319E9E743B6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B0C553D2-70E5-C3FF-065F-53AA42FAFB13" name="PAGO_PK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>3BE9FCA9-7E3E-28CC-9F99-1425BA83E94C</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43FAEF04-C160-B261-A2C8-CC177A4E4BFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1078543D-E0A6-65DB-38EF-0E8363F0368A" name="PAGO__IDX">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D8DB3818-1BA2-5342-9426-B061EA3CA7B4</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="6F85678A-C844-0A27-0F4A-F5AC53AEC40F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78D6FF62-BBB9-7355-4891-9CA595E3FED4" name="PAGO_PEDIDO_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>D8DB3818-1BA2-5342-9426-B061EA3CA7B4</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F85678A-C844-0A27-0F4A-F5AC53AEC40F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

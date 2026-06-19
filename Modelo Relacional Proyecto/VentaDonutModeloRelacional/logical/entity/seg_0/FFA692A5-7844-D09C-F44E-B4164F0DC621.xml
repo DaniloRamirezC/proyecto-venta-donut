@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3B4B84F0-8037-69B4-8209-AD4EFDD7AB1C" name="PEDIDO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FFA692A5-7844-D09C-F44E-B4164F0DC621" name="RECETA">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-28 20:36:51 UTC</createdTime>
+<createdTime>2026-05-28 02:45:38 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="idPedido" id="BEC9A95D-6E5E-36FB-2697-CAF33F247D7E">
+<Attribute name="idReceta" id="4B81B402-0130-B065-480D-C93A2D54F117">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-28 20:53:33 UTC</createdTime>
+<createdTime>2026-05-28 02:45:44 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
@@ -28,9 +28,9 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cliente_id" id="59BEE93A-32A1-5969-1DE9-655582B947EF">
+<Attribute name="cantidadNeta" id="C82208DF-6692-C797-8ADC-30CD347651B2">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-28 21:27:34 UTC</createdTime>
+<createdTime>2026-05-28 02:46:12 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
@@ -38,46 +38,47 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,5,3</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fechaPedido" id="6FDFA5D4-F7A7-1679-CE08-8FB63C271EDD">
+<Attribute name="unidadMedida" id="1009AAEB-8395-A502-DBEA-61D2A804B65B">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-28 20:54:02 UTC</createdTime>
+<createdTime>2026-05-28 02:46:41 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idDonut" id="3D132048-3517-9FFA-A8D4-7B71513A9528">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 02:48:03 UTC</createdTime>
+<generatorID>BF002522-6E99-35F8-BCE7-3669A098496B</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<referedAttribute>DE2FE8F9-8BB9-A2BE-B87C-6C5A835AB667</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="idCliente" id="33AF50EB-0327-5C9F-347A-D6773D1DDA3D">
+<Attribute name="idInsumo" id="66C17300-02CA-7164-A1E5-C97C911EA191">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-29 03:28:20 UTC</createdTime>
-<generatorID>51F08352-408E-AAE8-4B29-E45DA7FC625F</generatorID>
+<createdTime>2026-05-28 02:51:40 UTC</createdTime>
+<generatorID>5671FF33-7F54-2662-F70C-6F4D3064F70D</generatorID>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
 </engineerTo>
-<referedAttribute>F26B1CBA-1A68-0FAC-B93A-9B0A329831A1</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="idCupon" id="72575BF8-847A-58FA-318B-10EDE12BAA00">
-<createdBy>Asus</createdBy>
-<createdTime>2026-05-28 02:55:36 UTC</createdTime>
-<generatorID>C2C39883-3DE1-3017-1F35-B919AF4D1E1D</generatorID>
-<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
-<engineerTo>
-<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>12BD881E-0C0B-EF6B-85E2-4AD3F2743414</referedAttribute>
+<referedAttribute>944CDA91-AE26-47B8-74C9-F8F264F01809</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -86,16 +87,18 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="8AF16D2C-C303-6362-CF47-82E1C13A8518" name="PEDIDO PK">
+<identifier id="8F4DC49F-014F-0E10-BB21-236AA419846F" name="RECETA PK">
 <createdBy>Asus</createdBy>
-<createdTime>2026-04-28 20:56:11 UTC</createdTime>
+<createdTime>2026-05-28 02:46:02 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
 <engineerTo>
 <item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>BEC9A95D-6E5E-36FB-2697-CAF33F247D7E</attributeRef>
+<attributeRef>4B81B402-0130-B065-480D-C93A2D54F117</attributeRef>
+<attributeRef>3D132048-3517-9FFA-A8D4-7B71513A9528</attributeRef>
+<attributeRef>66C17300-02CA-7164-A1E5-C97C911EA191</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

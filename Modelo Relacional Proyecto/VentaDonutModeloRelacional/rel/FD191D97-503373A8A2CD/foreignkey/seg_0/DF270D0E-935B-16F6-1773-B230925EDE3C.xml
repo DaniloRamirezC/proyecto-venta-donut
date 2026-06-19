@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DF270D0E-935B-16F6-1773-B230925EDE3C" containerWithKeyObject="2E86FCF4-21DA-9E1C-1B0F-DB102EB00965" localFKIndex="28C7A4D0-01AF-2BC0-8413-B424AC72A05A" name="PEDIDO_CUPON_FK">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 03:26:06 UTC</createdTime>
+<generatorID>C2C39883-3DE1-3017-1F35-B919AF4D1E1D</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<referredTableLongName>CUPON</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F605C8C6-A9BE-645A-5978-51C3D376085C</referredTableID>
+<keyObject>26F68978-86EE-5901-E8F6-E1A44B51AC8F</keyObject>
+<referredKeyID>26F68978-86EE-5901-E8F6-E1A44B51AC8F</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>idCupon</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

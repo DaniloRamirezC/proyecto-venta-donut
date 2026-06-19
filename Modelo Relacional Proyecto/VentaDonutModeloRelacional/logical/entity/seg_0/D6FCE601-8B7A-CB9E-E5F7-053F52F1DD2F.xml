@@ -80,14 +80,30 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="idEmpresa" id="4BC5F8EF-E850-7433-D851-327986BEFA0E">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 02:16:00 UTC</createdTime>
+<generatorID>28FF52E0-1F59-4F9D-BFD9-0EBB3D6F302D</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<referedAttribute>FFDF177E-4B21-3D8D-22DC-C2B5DB9A324B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="94B72FB6-0080-927E-1544-EC36E587B3FF" name="COMPROBANTE_PAGO PK">
 <createdBy>Asus</createdBy>
 <createdTime>2026-04-29 03:56:27 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

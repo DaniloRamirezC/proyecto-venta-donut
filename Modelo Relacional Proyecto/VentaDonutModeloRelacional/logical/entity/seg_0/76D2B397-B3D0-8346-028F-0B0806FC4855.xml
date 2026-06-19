@@ -69,14 +69,30 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="idEmpresa" id="19F95C6E-9D3B-9433-11CE-DAEDFD6EBF9F">
+<createdBy>Asus</createdBy>
+<createdTime>2026-05-28 02:18:03 UTC</createdTime>
+<generatorID>A4E763D4-1DFC-9C6A-70F8-B96A0EFAD176</generatorID>
+<ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<engineerTo>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+</engineerTo>
+<referedAttribute>FFDF177E-4B21-3D8D-22DC-C2B5DB9A324B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="905DC12C-98D0-67AF-3953-4EC1C0A4816E" name="ENTREGA PK">
 <createdBy>Asus</createdBy>
 <createdTime>2026-04-28 21:02:28 UTC</createdTime>
 <ownerDesignName>VentaDonutModeloRelacional</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="true"/>
+<item key="DDB40F2D-659E-3B3D-BF39-9649BCBDDE1A" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
