@@ -1,33 +1,151 @@
 server:
- port: 8080
+  port: 8080
+
 spring:
- application:
-  name: api-gateway
- cloud:
-  gateway:
-   routes:
-# RUTA PARA EL SERVICIO DEL CATALOGO
-    - id: service-catalogo
-      uri: http://localhost:8081
-      predicates:
-      - Path=/donuts/**
-# RUTA PARA EL SERVICIO DE CLIENTES
-    - id: servicio-clientes
-      uri: http://localhost:8082
-      predicates:
-      - Path=/clientes/**
-#RUTA PARA EL SERVICIO DE PEDIDO
-    - id: servicio-pedido
-      uri: http://localhost:8083
-      predicates:
-      - Path=/api/v1/pedidos/**
-#RUTA PARA EL SERVICIO DE PAGO
-    - id: service-pagos
-      uri: http://localhost:8084
-      predicates:
-      - Path=/api/v1/pagos/**
-#RUTA PARA EL SERVICIO DE LOGISTICA
-    - id: service-logistica
-      uri: http://localhost:8085
-      predicates:
-      - Path=/api/v1/despachos/**
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      # --- CONFIGURACIÓN DE CORS GLOBAL ---
+      globalcors:
+        cors-configurations:
+          '/**':
+            allowedOrigins: "http://localhost:8080"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+
+      routes:
+        # service-catalogo
+        - id: service-catalogo
+          uri: http://localhost:8081
+          predicates: 
+          - Path=/donuts/**
+        - id: docs-catalogo
+          uri: http://localhost:8081
+          predicates: 
+          - Path=/donuts/v3/api-docs
+
+        # service-clientes
+        - id: service-clientes
+          uri: http://localhost:8082
+          predicates:
+          - Path=/clientes/**
+        - id: docs-clientes
+          uri: http://localhost:8082
+          predicates:
+          - Path=/clientes/v3/api-docs
+
+        # service-pedido
+        - id: servicio-pedido
+          uri: http://localhost:8083
+          predicates:
+          - Path=/api/v1/pedidos/**
+        - id: docs-pedido
+          uri: http://localhost:8083
+          predicates:
+          - Path=/api/v1/pedidos/v3/api-docs
+
+        # service-pagos
+        - id: service-pagos
+          uri: http://localhost:8084
+          predicates:
+          - Path=/api/v1/pagos/**
+        - id: docs-pagos
+          uri: http://localhost:8084
+          predicates:
+          - Path=/api/v1/pagos/v3/api-docs
+
+        # service-logistica
+        - id: service-logistica
+          uri: http://localhost:8085
+          predicates:
+          - Path=/api/v1/despachos/**
+        - id: docs-logistica
+          uri: http://localhost:8085
+          predicates:
+          - Path=/api/v1/despachos/v3/api-docs
+
+        # service-autenticacion
+        - id: service-autenticacion
+          uri: http://localhost:8086
+          predicates:
+          - Path=/auth
+        - id: docs-autenticacion
+          uri: http://localhost:8086
+          predicates:
+          - Path=/auth/v3/api-docs
+
+        # service-empresa
+        - id: service-empresa
+          uri: http://localhost:8087
+          predicates:
+          - Path=/api/v1/empresas/**
+        - id: docs-empresa
+          uri: http://localhost:8087
+          predicates:
+          - Path=/api/v1/empresas/v3/api-docs
+
+        # service-reportes
+        - id: service-reportes
+          uri: http://localhost:8088
+          predicates:
+          - Path=/api/v1/reportes/**
+        - id: docs-reportes
+          uri: http://localhost:8088
+          predicates:
+          - Path=/api/v1/reportes/v3/api-docs
+
+        # service-inventario
+        - id: service-inventario
+          uri: http://localhost:8089
+          predicates:
+          - Path=/api/v1/inventario/proveedores/**, /api/v1/inventario/insumos/**, /api/v1/inventario/recetas/**
+        - id: docs-inventario
+          uri: http://localhost:8089
+          predicates:
+          - Path=/api/v1/inventario/v3/api-docs
+
+
+        # service-promociones
+        - id: service-promociones
+          uri: http://localhost:8090
+          predicates:
+          - Path=/api/v1/promociones/**
+        - id: docs-promociones
+          uri: http://localhost:8090
+          predicates:
+          - Path=/api/v1/promociones/v3/api-docs
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: Servicio Catalogo
+        url: /donuts/v3/api-docs
+      - name: Servicio Clientes
+        url: /clientes/v3/api-docs
+      - name: Servicio Pedidos
+        url: /api/v1/pedidos/v3/api-docs
+      - name: Servicio Pagos
+        url: /api/v1/pagos/v3/api-docs
+      - name: Servicio Logistica
+        url: /api/v1/despachos/v3/api-docs
+      - name: Servicio Autenticacion
+        url: /auth/v3/api-docs
+      - name: Servicio Empresa
+        url: /api/v1/empresas/v3/api-docs
+      - name: Servicio Reportes
+        url: /api/v1/reportes/v3/api-docs
+      - name: Servicio Inventario
+        url: /api/v1/inventario/v3/api-docs
+      - name: Servicio Promociones
+        url: /api/v1/promociones/v3/api-docs
