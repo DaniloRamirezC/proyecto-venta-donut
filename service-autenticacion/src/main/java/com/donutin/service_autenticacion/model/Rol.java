@@ -1,5 +1,6 @@
 package com.donutin.service_autenticacion.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,5 +27,6 @@ public class Rol
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
+    @Column(name = "nombre_rol", unique = true, nullable = false)
     private String nombreRol; //Cliente, gerente, pastelero, contador, repartidor
 }
