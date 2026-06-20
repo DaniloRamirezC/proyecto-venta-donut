@@ -2,7 +2,6 @@ package com.donutin.service_logistica.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -11,10 +10,13 @@ import com.donutin.service_logistica.repository.DespachoRepository;
 
 @Service
 public class DespachoService {
-    @Autowired
-    private DespachoRepository despachoRepository;
-    @Autowired
-    private WebClient.Builder webClientBuilder;
+    private final DespachoRepository despachoRepository;
+    private final WebClient.Builder webClientBuilder;
+
+    DespachoService(DespachoRepository despachoRepository, WebClient.Builder webClientBuilder) {
+        this.despachoRepository = despachoRepository;
+        this.webClientBuilder = webClientBuilder;
+    }
 
     public Despacho guardarDespacho(Despacho despacho){
         Despacho guardado = despachoRepository.save(despacho);
