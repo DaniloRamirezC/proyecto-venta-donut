@@ -99,7 +99,7 @@ spring:
           predicates:
           - Path=/api/v1/empresas/**
           filters:
-          - AuthenticationFilter|
+          - AuthenticationFilter
         - id: docs-empresa
           uri: http://localhost:8087
           predicates:
