@@ -87,7 +87,7 @@ spring:
         - id: service-autenticacion
           uri: http://localhost:8086
           predicates:
-          - Path=/auth
+          - Path=/auth/**
         - id: docs-autenticacion
           uri: http://localhost:8086
           predicates:
