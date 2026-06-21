@@ -67,7 +67,7 @@ public class GestionService
                 enriquecerConDonut(detalle);
             }
         }
-        return guardado;
+        return enriquecerPedidoConCupon(guardado);
     }
     public List<Pedido> listarPedidos()
     {
@@ -78,11 +78,15 @@ public class GestionService
     {
         Pedido pedido = pedidoRepository.findById(id).orElse(null);
 
-        if(pedido!=null && pedido.getDetallePedido()!=null)
+        if(pedido!=null)
         {
-            for (DetallePedido detalle : pedido.getDetallePedido()) {
-                enriquecerConDonut(detalle);
+            if(pedido.getDetallePedido()!=null)
+            {
+                for (DetallePedido detalle : pedido.getDetallePedido()) {
+                    enriquecerConDonut(detalle);
+                }
             }
+            enriquecerPedidoConCupon(pedido);
         }
         return pedido;
     }
@@ -119,4 +123,22 @@ public class GestionService
         }
         return detallePedido;
     }
+
+    private Pedido enriquecerPedidoConCupon(Pedido pedido) {
+    if (pedido != null && pedido.getCuponId() != null) {
+        try {
+            // Viaje por red a buscar el Cupón (puerto 8090)
+            Object cupon = webClientBuilder.build()
+                .get()
+                .uri("http://localhost:8090/api/v1/cupones/" + pedido.getCuponId())
+                .retrieve()
+                .bodyToMono(Object.class)
+                .block();
+            pedido.setDatosCupon(cupon);
+        } catch (Exception e) {
+            pedido.setDatosCupon("Información del cupón no disponible");
+        }
+    }
+    return pedido;
+}
 }
