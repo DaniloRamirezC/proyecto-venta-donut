@@ -27,13 +27,13 @@ spring:
         - id: service-catalogo
           uri: http://localhost:8081
           predicates: 
-          - Path=/api/v1/donuts/**
+          - Path=/api/v1/catalogo/donuts/**, /api/v1/catalogo/tipos/**
           filters:
           - AuthenticationFilter
         - id: docs-catalogo
           uri: http://localhost:8081
           predicates: 
-          - Path=/api/v1/donuts/v3/api-docs
+          - Path=/api/v1/catalogo/v3/api-docs
 
         # service-clientes
         - id: service-clientes
@@ -51,7 +51,7 @@ spring:
         - id: servicio-pedido
           uri: http://localhost:8083
           predicates:
-          - Path=/api/v1/pedidos/**
+          - Path=/api/v1/pedidos/pedido/**, /api/v1/pedidos/detalle/**
           filters:
           - AuthenticationFilter
         - id: docs-pedido
@@ -151,7 +151,7 @@ springdoc:
   swagger-ui:
     urls:
       - name: Servicio Catalogo
-        url: /api/v1/donuts/v3/api-docs
+        url: /api/v1/catalogo/v3/api-docs
       - name: Servicio Clientes
         url: /api/v1/clientes/v3/api-docs
       - name: Servicio Pedidos
