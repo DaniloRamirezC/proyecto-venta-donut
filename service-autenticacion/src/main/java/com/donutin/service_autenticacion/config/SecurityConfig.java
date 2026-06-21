@@ -21,9 +21,9 @@ public class SecurityConfig
             .authorizeHttpRequests(auth -> auth
             .requestMatchers("/api/v1/auth/**").permitAll()
             
-            .requestMatchers("/v3/api-docs/**").permitAll()
-            .requestMatchers("/swagger-ui/**").permitAll()
-            .requestMatchers("/swagger-ui.html").permitAll()
+            .requestMatchers("/api/v1/auth/v3/api-docs/**").permitAll()
+            .requestMatchers("/api/v1/auth/swagger-ui/**").permitAll()
+            .requestMatchers("/api/v1/auth/swagger-ui.html").permitAll()
 
             .anyRequest().authenticated()
             ).build();
