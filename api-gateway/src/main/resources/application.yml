@@ -27,25 +27,25 @@ spring:
         - id: service-catalogo
           uri: http://localhost:8081
           predicates: 
-          - Path=/donuts/**
+          - Path=/api/v1/donuts/**
           filters:
           - AuthenticationFilter
         - id: docs-catalogo
           uri: http://localhost:8081
           predicates: 
-          - Path=/donuts/v3/api-docs
+          - Path=/api/v1/donuts/v3/api-docs
 
         # service-clientes
         - id: service-clientes
           uri: http://localhost:8082
           predicates:
-          - Path=/clientes/**
+          - Path=/api/v1/clientes/**
           filters:
           - AuthenticationFilter          
         - id: docs-clientes
           uri: http://localhost:8082
           predicates:
-          - Path=/clientes/v3/api-docs
+          - Path=/api/v1/clientes/v3/api-docs
 
         # service-pedido
         - id: servicio-pedido
@@ -87,11 +87,11 @@ spring:
         - id: service-autenticacion
           uri: http://localhost:8086
           predicates:
-          - Path=/auth/**
+          - Path=/api/v1/auth/**
         - id: docs-autenticacion
           uri: http://localhost:8086
           predicates:
-          - Path=/auth/v3/api-docs
+          - Path=/api/v1/auth/v3/api-docs
 
         # service-empresa
         - id: service-empresa
@@ -151,9 +151,9 @@ springdoc:
   swagger-ui:
     urls:
       - name: Servicio Catalogo
-        url: /donuts/v3/api-docs
+        url: /api/v1/donuts/v3/api-docs
       - name: Servicio Clientes
-        url: /clientes/v3/api-docs
+        url: /api/v1/clientes/v3/api-docs
       - name: Servicio Pedidos
         url: /api/v1/pedidos/v3/api-docs
       - name: Servicio Pagos
@@ -161,7 +161,7 @@ springdoc:
       - name: Servicio Logistica
         url: /api/v1/despachos/v3/api-docs
       - name: Servicio Autenticacion
-        url: /auth/v3/api-docs
+        url: /api/v1/auth/v3/api-docs
       - name: Servicio Empresa
         url: /api/v1/empresas/v3/api-docs
       - name: Servicio Reportes
