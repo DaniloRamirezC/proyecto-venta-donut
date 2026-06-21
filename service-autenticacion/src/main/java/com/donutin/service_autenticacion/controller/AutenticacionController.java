@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.donutin.service_autenticacion.dto.AuthRequest;
-import com.donutin.service_autenticacion.model.Usuario;
 import com.donutin.service_autenticacion.service.AuthService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -26,9 +25,9 @@ public class AutenticacionController
     }
     @Operation(summary = "Registrar nuevo usuario", description = "Guarda el usuario con contraseña encriptada")
     @PostMapping("/registrar")
-    public ResponseEntity<String> registrarUsuario(@RequestBody Usuario usuario)
+    public ResponseEntity<String> registrarUsuario(@RequestBody AuthRequest request)
     {
-        return ResponseEntity.ok(authService.registrar(usuario));
+        return ResponseEntity.ok(authService.registrar(request));
     }
     @Operation(summary = "Iniciar sesión", description = "Retorna el Token JWT si las credenciales son válidas")
     @PostMapping("/login")
