@@ -23,7 +23,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/v1/pedidos")
+@RequestMapping("/api/v1/pedidos/pedido")
 @CrossOrigin(origins = "*")
 public class PedidoController 
 {
