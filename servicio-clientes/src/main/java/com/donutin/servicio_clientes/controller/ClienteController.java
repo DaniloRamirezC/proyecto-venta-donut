@@ -26,7 +26,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("api/v1/clientes")
+@RequestMapping("/api/v1/clientes")
 @Tag(name = "Clientes", description = "Operaciones relacionadas con la gestión de clientes")
 @CrossOrigin(origins = "*")
 public class ClienteController 
