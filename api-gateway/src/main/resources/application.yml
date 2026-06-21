@@ -23,124 +23,107 @@ spring:
             allowedHeaders: "*"
 
       routes:
-        # service-catalogo
-        - id: service-catalogo
-          uri: http://localhost:8081
-          predicates: 
-          - Path=/api/v1/catalogo/donuts/**, /api/v1/catalogo/tipos/**
-          filters:
-          - AuthenticationFilter
+        # 1. RUTAS DE DOCUMENTACIÓN
         - id: docs-catalogo
           uri: http://localhost:8081
           predicates: 
-          - Path=/api/v1/catalogo/v3/api-docs
-
-        # service-clientes
-        - id: service-clientes
-          uri: http://localhost:8082
-          predicates:
-          - Path=/api/v1/clientes/**
-          filters:
-          - AuthenticationFilter          
+            - Path=/api/v1/catalogo/v3/api-docs
         - id: docs-clientes
           uri: http://localhost:8082
           predicates:
-          - Path=/api/v1/clientes/v3/api-docs
-
-        # service-pedido
-        - id: servicio-pedido
-          uri: http://localhost:8083
-          predicates:
-          - Path=/api/v1/pedidos/pedido/**, /api/v1/pedidos/detalle/**
-          filters:
-          - AuthenticationFilter
+            - Path=/api/v1/clientes/v3/api-docs
         - id: docs-pedido
           uri: http://localhost:8083
           predicates:
-          - Path=/api/v1/pedidos/v3/api-docs
-
-        # service-pagos
-        - id: service-pagos
-          uri: http://localhost:8084
-          predicates:
-          - Path=/api/v1/pagos/**
-          filters:
-          - AuthenticationFilter
+            - Path=/api/v1/pedidos/v3/api-docs
         - id: docs-pagos
           uri: http://localhost:8084
           predicates:
-          - Path=/api/v1/pagos/v3/api-docs
-
-        # service-logistica
-        - id: service-logistica
-          uri: http://localhost:8085
-          predicates:
-          - Path=/api/v1/despachos/**
-          filters:
-          - AuthenticationFilter
+            - Path=/api/v1/pagos/v3/api-docs
         - id: docs-logistica
           uri: http://localhost:8085
           predicates:
-          - Path=/api/v1/despachos/v3/api-docs
-
-        # service-autenticacion
-        - id: service-autenticacion
-          uri: http://localhost:8086
-          predicates:
-          - Path=/api/v1/auth/**
+            - Path=/api/v1/despachos/v3/api-docs
         - id: docs-autenticacion
           uri: http://localhost:8086
           predicates:
-          - Path=/api/v1/auth/v3/api-docs
-
-        # service-empresa
-        - id: service-empresa
-          uri: http://localhost:8087
-          predicates:
-          - Path=/api/v1/empresas/**
-          filters:
-          - AuthenticationFilter
+            - Path=/api/v1/auth/v3/api-docs
         - id: docs-empresa
           uri: http://localhost:8087
           predicates:
-          - Path=/api/v1/empresas/v3/api-docs
-
-        # service-reportes
-        - id: service-reportes
-          uri: http://localhost:8088
-          predicates:
-          - Path=/api/v1/reportes/**
-          filters:
-          - AuthenticationFilter
+            - Path=/api/v1/empresas/v3/api-docs
         - id: docs-reportes
           uri: http://localhost:8088
           predicates:
-          - Path=/api/v1/reportes/v3/api-docs
-
-        # service-inventario
-        - id: service-inventario
-          uri: http://localhost:8089
-          predicates:
-          - Path=/api/v1/inventario/proveedores/**, /api/v1/inventario/insumos/**, /api/v1/inventario/recetas/**
-          filters:
-          - AuthenticationFilter
+            - Path=/api/v1/reportes/v3/api-docs
         - id: docs-inventario
           uri: http://localhost:8089
           predicates:
-          - Path=/api/v1/inventario/v3/api-docs
-
-
-        # service-promociones
-        - id: service-promociones
-          uri: http://localhost:8090
-          predicates:
-          - Path=/api/v1/promociones/**
-          filters:
-          - AuthenticationFilter
+            - Path=/api/v1/inventario/v3/api-docs
         - id: docs-promociones
           uri: http://localhost:8090
           predicates:
-          - Path=/api/v1/promociones/v3/api-docs
+            - Path=/api/v1/promociones/v3/api-docs
+
+        # 2. RUTAS DE NEGOCIO (CON FILTRO DE SEGURIDAD)
+        - id: service-catalogo
+          uri: http://localhost:8081
+          predicates: 
+            - Path=/api/v1/catalogo/**
+          filters:
+            - AuthenticationFilter
+        - id: service-clientes
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/v1/clientes/**
+          filters:
+            - AuthenticationFilter          
+        - id: servicio-pedido
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/v1/pedidos/**
+          filters:
+            - AuthenticationFilter
+        - id: service-pagos
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/v1/pagos/**
+          filters:
+            - AuthenticationFilter
+        - id: service-logistica
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/despachos/**
+          filters:
+            - AuthenticationFilter
+        - id: service-autenticacion
+          uri: http://localhost:8086
+          predicates:
+            - Path=/api/v1/auth/**
+        - id: service-empresa
+          uri: http://localhost:8087
+          predicates:
+            - Path=/api/v1/empresas/**
+          filters:
+            - AuthenticationFilter
+        - id: service-reportes
+          uri: http://localhost:8088
+          predicates:
+            - Path=/api/v1/reportes/**
+          filters:
+            - AuthenticationFilter
+        - id: service-inventario
+          uri: http://localhost:8089
+          predicates:
+            - Path=/api/v1/inventario/**
+          filters:
+            - AuthenticationFilter
+        - id: service-promociones
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/v1/promociones/**
+          filters:
+            - AuthenticationFilter
 
 eureka:
   client:
@@ -171,7 +154,7 @@ springdoc:
       - name: Servicio Promociones
         url: /api/v1/promociones/v3/api-docs
 
-  logging:
+logging:
   level:
     org.springframework.cloud.gateway: TRACE
     org.springframework.http.server.reactive: DEBUG
