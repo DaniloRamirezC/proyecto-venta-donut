@@ -24,6 +24,10 @@ public class SecurityConfig
             .requestMatchers("/api/v1/auth/v3/api-docs/**").permitAll()
             .requestMatchers("/api/v1/auth/swagger-ui/**").permitAll()
             .requestMatchers("/api/v1/auth/swagger-ui.html").permitAll()
+            // El * intercepta automáticamente todos los microservicios
+            .requestMatchers("/api/v1/*/v3/api-docs/**").permitAll()
+            .requestMatchers("/api/v1/*/swagger-ui/**").permitAll()
+            .requestMatchers("/api/v1/*/swagger-ui.html").permitAll()
 
             .anyRequest().authenticated()
             ).build();
