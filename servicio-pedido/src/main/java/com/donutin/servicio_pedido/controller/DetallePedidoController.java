@@ -22,7 +22,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 @RestController
-@RequestMapping("/api/v1/pedidos/detalles")
+@RequestMapping("/api/v1/pedidos/detalle")
 @CrossOrigin(origins = "*")
 public class DetallePedidoController 
 {
