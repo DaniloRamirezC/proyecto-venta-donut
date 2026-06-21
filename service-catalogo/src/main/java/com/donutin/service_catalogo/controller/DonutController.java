@@ -26,7 +26,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/v1/donuts")
+@RequestMapping("/api/v1/catalogo/donuts")
 @Tag(name = "Donuts", description = "Operaciones relacionadas con la gestión de las donuts")
 @CrossOrigin(origins = "*") //Permite que Swagger lo llame desde cualquier puerto
 public class DonutController 

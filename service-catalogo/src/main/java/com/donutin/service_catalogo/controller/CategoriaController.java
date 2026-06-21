@@ -14,7 +14,7 @@ import com.donutin.service_catalogo.repository.CategoriaRepository;
 
 
 @RestController
-@RequestMapping("/api/v1/tipos")
+@RequestMapping("/api/v1/catalogo/tipos")
 @CrossOrigin(origins = "*")
 public class CategoriaController 
 {
