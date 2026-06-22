@@ -30,89 +30,89 @@ public class ReporteService
         return reporteRepository.findAll();
     }
 
-    public Reporte crearReporteDia(LocalDate fecha)
-    {
-        int cantidadPedidosEntregados = 0;
-        long totalIngresos=0L;
+    public Reporte crearReporteDia(LocalDate fecha) {
+    int cantidadPedidosEntregados = 0;
+    long totalIngresos = 0L;
 
-        List<Map<String, Object>> listaPedidos = null; 
-        try{
-            Object respuestaPedido = webClientBuilder.build()
-                    .get()
-                    .uri("http://localhost:8083/api/v1/pedidos?fecha=" + fecha)
-                    .retrieve()
-                    .bodyToMono(Object.class)
-                    .block();
-            if(respuestaPedido instanceof List)
-            {
-                listaPedidos = (List<Map<String, Object>>) respuestaPedido;
-            }
-        } catch (Exception ex){
-            System.out.println("Error al consultar pedido: Pedido no disponible");
-        }
-        if(listaPedidos!=null)
-        {
-            for(Map<String, Object> pedido : listaPedidos){
-                try{
-                    Object pedidoObj = pedido.get("idPedido");
-                    if(pedidoObj!=null)
-                    {
-                        Long idPedido = ((Number) pedidoObj).longValue();
+    // 1. CONSUMIR TODOS LOS PEDIDOS SIN FILTRAR POR FECHA
+    try {
+        Object respuestaPedido = webClientBuilder.build()
+                .get()
+                .uri("http://localhost:8083/api/v1/pedidos/pedido") 
+                .retrieve()
+                .bodyToMono(Object.class)
+                .block();
+
+        if (respuestaPedido instanceof List) {
+            List<Map<String, Object>> listaPedidos = (List<Map<String, Object>>) respuestaPedido;
+            
+            for (Map<String, Object> pedido : listaPedidos) {
+                try {
+                    Object idObj = pedido.get("idPedido");
+                    if (idObj != null) {
+                        Long idPedido = ((Number) idObj).longValue();
+                        
+                        // Consultamos a logística para ver si este pedido ya fue entregado
                         Object respuestaLogistica = webClientBuilder.build()
                                 .get()
-                                .uri("http://localhost:8085/api/v1/despachos/pedido/" +idPedido)
+                                .uri("http://localhost:8085/api/v1/despachos/" + idPedido)
                                 .retrieve()
                                 .bodyToMono(Object.class)
                                 .block();
-                        if(respuestaLogistica instanceof Map)
-                        {
-                            Map<String, Object> datosLogistica = (Map<String, Object>) respuestaLogistica;
-                            Object estadoObject = datosLogistica.get("estado");
-                            if(estadoObject!=null && "Entregado".equalsIgnoreCase(String.valueOf(datosLogistica.get("estado"))))
-                            {
+
+                        if (respuestaLogistica instanceof Map) {
+                            Map<String, Object> despacho = (Map<String, Object>) respuestaLogistica;
+                            if ("Entregado".equalsIgnoreCase(String.valueOf(despacho.get("estado")))) {
                                 cantidadPedidosEntregados++;
                             }
                         }
                     }
                 } catch (Exception ex) {
-                    System.out.println("No se pudo verificar el estado en logística para el pedido");
+                    System.out.println("No se pudo verificar logística para un pedido individual.");
                 }
             }
         }
-        try{
-            Object respuestaPagos = webClientBuilder.build()
-                    .get()
-                    .uri("http://localhost:8084/api/v1/pagos")
-                    .retrieve()
-                    .bodyToMono(Object.class)
-                    .block();
-            if(respuestaPagos instanceof List)
-            {
-                List<Map<String, Object>> listaPagos = (List<Map<String, Object>>) respuestaPagos;
-                for(Map<String, Object> pago: listaPagos)
-                {
-                    Object estadoTransaccObject = pago.get("estadoTransaccion");
-                    if(estadoTransaccObject!=null && "Aprobado".equalsIgnoreCase(String.valueOf(pago.get("estadoTransaccion"))))
-                    {
-                        Object montoObj = pago.get("monto");
-                        if(montoObj instanceof Number)
-                        {
-                            totalIngresos += ((Number) montoObj).longValue();
-                        }
+    } catch (Exception ex) {
+        System.out.println("Error al consultar service-pedido: " + ex.getMessage());
+    }
+
+    // 2. CONSUMIR TODOS LOS PAGOS GENERALES
+    try {
+        Object respuestaPagos = webClientBuilder.build()
+                .get()
+                .uri("http://localhost:8084/api/v1/pagos") // Trae todo el historial de la BD
+                .retrieve()
+                .bodyToMono(Object.class)
+                .block();
+
+        if (respuestaPagos instanceof List) {
+            List<Map<String, Object>> listaPagos = (List<Map<String, Object>>) respuestaPagos;
+            for (Map<String, Object> pago : listaPagos) {
+                Object estado = pago.get("estadoTransaccion");
+                // Como no hay fecha, sumamos ABSOLUTAMENTE TODO lo que esté aprobado en el sistema
+                if (estado != null && "Aprobado".equalsIgnoreCase(String.valueOf(estado))) {
+                    Object montoObj = pago.get("monto");
+                    if (montoObj instanceof Number) {
+                        totalIngresos += ((Number) montoObj).longValue();
                     }
                 }
             }
-        } catch (Exception ex) {
-            System.out.println("Error: Servicio de pagos no disponible");
         }
-        Reporte reporteDiario = reporteRepository.findByFecha(fecha)
-                .orElse(new Reporte());
-        reporteDiario.setFecha(fecha);
-        reporteDiario.setTotalPedidos(cantidadPedidosEntregados);
-        reporteDiario.setTotalRecaudado(totalIngresos);
-
-        return reporteRepository.save(reporteDiario);
+    } catch (Exception ex) {
+        System.out.println("Error al consultar el servicio de pagos: " + ex.getMessage());
     }
+
+    // 3. GUARDAR EL INSTANTÁNEO ACUMULADO
+    // Nota: Guardará los totales históricos asociados a la fecha del día en que se ejecutó
+    Reporte reporteDiario = reporteRepository.findByFecha(fecha)
+            .orElse(new Reporte());
+
+    reporteDiario.setFecha(fecha);
+    reporteDiario.setTotalPedidos(cantidadPedidosEntregados);
+    reporteDiario.setTotalRecaudado(totalIngresos);
+
+    return reporteRepository.save(reporteDiario);
+}
 
     public Optional<Reporte> obtenerReportePorId(@NonNull Long id)
     {
