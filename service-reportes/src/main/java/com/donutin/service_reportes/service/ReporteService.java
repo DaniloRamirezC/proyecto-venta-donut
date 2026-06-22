@@ -60,7 +60,7 @@ public class ReporteService
                         Long idPedido = ((Number) pedidoObj).longValue();
                         Object respuestaLogistica = webClientBuilder.build()
                                 .get()
-                                .uri("http://localhost:8085/api/v1/logistica/pedido/" +idPedido)
+                                .uri("http://localhost:8085/api/v1/despachos/pedido/" +idPedido)
                                 .retrieve()
                                 .bodyToMono(Object.class)
                                 .block();
@@ -82,7 +82,7 @@ public class ReporteService
         try{
             Object respuestaPagos = webClientBuilder.build()
                     .get()
-                    .uri("http://localhost:8084/api/v1/pagos?fecha=" +fecha)
+                    .uri("http://localhost:8084/api/v1/pagos")
                     .retrieve()
                     .bodyToMono(Object.class)
                     .block();
@@ -117,5 +117,10 @@ public class ReporteService
     public Optional<Reporte> obtenerReportePorId(@NonNull Long id)
     {
         return reporteRepository.findById(id);
+    }
+
+    public Optional<Reporte> buscarPorFecha(LocalDate fecha)
+    {
+        return reporteRepository.findByFecha(fecha);
     }
 }
