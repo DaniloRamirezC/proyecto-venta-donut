@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2026 a las 07:33:36
+-- Tiempo de generación: 22-06-2026 a las 04:26:31
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 5.6.31
 
@@ -45,7 +45,10 @@ INSERT INTO `detalle_pedido` (`id_detalle`, `cantidad`, `donut_id`, `pedido_id`)
 (6, 5, 4, 7),
 (7, 2, 5, 8),
 (8, 2, 6, 9),
-(9, 1, 7, 10);
+(9, 1, 7, 10),
+(10, 5, 6, 11),
+(11, 2, 7, 12),
+(12, 1, 8, 13);
 
 -- --------------------------------------------------------
 
@@ -56,20 +59,24 @@ INSERT INTO `detalle_pedido` (`id_detalle`, `cantidad`, `donut_id`, `pedido_id`)
 CREATE TABLE `pedido` (
   `id_pedido` bigint(20) NOT NULL,
   `cliente_id` bigint(20) DEFAULT NULL,
-  `fecha_pedido` date DEFAULT NULL
+  `fecha_pedido` date DEFAULT NULL,
+  `cupon_id` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `pedido`
 --
 
-INSERT INTO `pedido` (`id_pedido`, `cliente_id`, `fecha_pedido`) VALUES
-(5, 1, '2026-05-04'),
-(6, 2, '2026-04-16'),
-(7, 3, '2026-04-28'),
-(8, 4, '2026-04-25'),
-(9, 5, '2026-05-12'),
-(10, 6, '2026-05-14');
+INSERT INTO `pedido` (`id_pedido`, `cliente_id`, `fecha_pedido`, `cupon_id`) VALUES
+(5, 1, '2026-05-04', NULL),
+(6, 2, '2026-04-16', NULL),
+(7, 3, '2026-04-28', NULL),
+(8, 4, '2026-04-25', NULL),
+(9, 5, '2026-05-12', NULL),
+(10, 6, '2026-05-14', NULL),
+(11, 5, '2026-06-04', NULL),
+(12, 6, '2026-06-08', NULL),
+(13, 6, '2026-06-08', 3);
 
 --
 -- Índices para tablas volcadas
@@ -96,12 +103,12 @@ ALTER TABLE `pedido`
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
-  MODIFY `id_detalle` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_detalle` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT de la tabla `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `id_pedido` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_pedido` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- Restricciones para tablas volcadas
 --

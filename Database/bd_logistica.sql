@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2026 a las 07:34:27
+-- Tiempo de generación: 22-06-2026 a las 04:26:06
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 5.6.31
 
@@ -46,7 +46,11 @@ INSERT INTO `despacho` (`id_despacho`, `estado`, `pedido_id`, `repartidor`, `cli
 (3, 'En camino', 7, 'Carlos Moreno', NULL),
 (4, 'En preparación', 8, 'Yeison Ferrada', NULL),
 (5, 'En preparación', 9, 'Ricardo Solís', 5),
-(6, 'En camino', 10, 'Yohany Rivera', 6);
+(6, 'En camino', 10, 'Yohany Rivera', 6),
+(7, 'Entregado', 6, 'Juan Pérez', 8),
+(8, 'Entregado', 5, 'Felix Arrieta', 9),
+(9, 'Entregado', 7, 'Sergio Honores', 8),
+(10, 'En camino', 7, 'Juan Carlos Toro', 8);
 
 --
 -- Índices para tablas volcadas
@@ -66,7 +70,7 @@ ALTER TABLE `despacho`
 -- AUTO_INCREMENT de la tabla `despacho`
 --
 ALTER TABLE `despacho`
-  MODIFY `id_despacho` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
+  MODIFY `id_despacho` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2026 a las 07:33:59
+-- Tiempo de generación: 22-06-2026 a las 04:26:19
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 5.6.31
 
@@ -46,7 +46,8 @@ INSERT INTO `comprobante_pago` (`id_comprobante`, `detalle`, `id_pago`, `monto_i
 (3, 'Compra Vaso Donutin Max', 3, 479, 2521),
 (4, 'Compra caja Donutin Premium', 4, 1038, 5462),
 (5, 'Compra Torre Fiesta Donutin', 5, 2634, 13866),
-(6, 'Compra Caja Eco Felicidades', 6, 2634, 13866);
+(6, 'Compra Caja Eco Felicidades', 6, 2634, 13866),
+(7, 'Compra Brocheta Donutin', 7, 160, 840);
 
 -- --------------------------------------------------------
 
@@ -72,7 +73,8 @@ INSERT INTO `pago` (`id_pago`, `estado_transaccion`, `metodo_pago`, `monto`, `pe
 (3, b'1', 'Tarjeta débito', 3000, 7),
 (4, b'1', 'Tarjeta crédito', 6500, 8),
 (5, b'1', 'Webpay', 16500, 9),
-(6, b'1', 'Efectivo', 16500, 10);
+(6, b'1', 'Efectivo', 16500, 10),
+(7, b'1', 'Tarjeta débito', 1000, 5);
 
 --
 -- Índices para tablas volcadas
@@ -99,12 +101,12 @@ ALTER TABLE `pago`
 -- AUTO_INCREMENT de la tabla `comprobante_pago`
 --
 ALTER TABLE `comprobante_pago`
-  MODIFY `id_comprobante` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_comprobante` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `pago`
 --
 ALTER TABLE `pago`
-  MODIFY `id_pago` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pago` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Restricciones para tablas volcadas
 --

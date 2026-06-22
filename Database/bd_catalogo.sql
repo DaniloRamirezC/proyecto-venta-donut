@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2026 a las 07:31:48
+-- Tiempo de generación: 22-06-2026 a las 04:24:57
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 5.6.31
 
@@ -43,7 +43,10 @@ INSERT INTO `categoria` (`id_categoria`, `nombre`) VALUES
 (3, 'Sin azúcar'),
 (4, 'Premium'),
 (5, 'Vegano'),
-(6, 'Sin gluten');
+(6, 'Sin gluten'),
+(7, 'Vegano'),
+(8, 'Vegano'),
+(9, 'Vegano');
 
 -- --------------------------------------------------------
 
@@ -70,7 +73,9 @@ INSERT INTO `donut` (`id`, `descripcion`, `nombre_donut`, `precio_unitario`, `st
 (4, 'Vaso Donutin con 12 deliciosas mini donuts', 'Vaso Donutin Max', 3000, 20, 3),
 (5, 'Caja de 16 deliciosos donutines más 3 cuchuflíes', 'Caja Donutin Premium', 6500, 100, 4),
 (6, 'Torre temática montada con 50 mini donuts', 'Torre Fiesta Donutin', 16500, 20, 5),
-(7, 'Caja ecológica con 8 mini donuts', 'Caja Eco Felicidades', 2500, 30, 6);
+(7, 'Caja ecológica con 8 mini donuts', 'Caja Eco Felicidades', 2500, 30, 6),
+(8, 'Brocheta Donutin con 4 deliciosas mini donuts', 'Brocheta Donutin', 1000, 40, 7),
+(10, 'Brocheta Donutin con 4 deliciosas mini donuts', 'Brocheta Donutin', 1000, 38, 9);
 
 --
 -- Índices para tablas volcadas
@@ -97,12 +102,12 @@ ALTER TABLE `donut`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id_categoria` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_categoria` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `donut`
 --
 ALTER TABLE `donut`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- Restricciones para tablas volcadas
 --
