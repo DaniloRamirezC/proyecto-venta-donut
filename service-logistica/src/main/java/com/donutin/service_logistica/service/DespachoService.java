@@ -52,7 +52,7 @@ public class DespachoService {
             try{
                 Object pedido = webClientBuilder.build()
                 .get()
-                .uri("http://localhost:8083/api/v1/pedidos/" + despacho.getPedidoId())
+                .uri("http://localhost:8083/api/v1/pedidos/pedido/" + despacho.getPedidoId())
                 .retrieve()
                 .bodyToMono(Object.class)
                 .block();
@@ -61,12 +61,12 @@ public class DespachoService {
                 despacho.setDatosPedido("Informacion de pedido no disponible");
             }
         }
-        
+
         if (despacho.getClienteId() != null) {
             try {
                 Object cliente = webClientBuilder.build()
                 .get()
-                .uri("http://localhost:8082/clientes/" + despacho.getClienteId())
+                .uri("http://localhost:8082/api/v1/clientes/" + despacho.getClienteId())
                 .retrieve()
                 .bodyToMono(Object.class)
                 .block();
