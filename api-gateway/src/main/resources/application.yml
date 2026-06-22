@@ -82,20 +82,20 @@ spring:
           uri: http://localhost:8083
           predicates:
             - Path=/api/v1/pedidos/**
-          filters:
-            - AuthenticationFilter
+          #filters:
+            #- AuthenticationFilter
         - id: service-pagos
           uri: http://localhost:8084
           predicates:
             - Path=/api/v1/pagos/**
-          filters:
-            - AuthenticationFilter
+          #filters:
+            #- AuthenticationFilter
         - id: service-logistica
           uri: http://localhost:8085
           predicates:
             - Path=/api/v1/despachos/**
-          filters:
-            - AuthenticationFilter
+          #filters:
+            #- AuthenticationFilter
         - id: service-autenticacion
           uri: http://localhost:8086
           predicates:
@@ -110,20 +110,20 @@ spring:
           uri: http://localhost:8088
           predicates:
             - Path=/api/v1/reportes/**
-          filters:
-            - AuthenticationFilter
+          #filters:
+            #- AuthenticationFilter
         - id: service-inventario
           uri: http://localhost:8089
           predicates:
             - Path=/api/v1/inventario/**
-          filters:
-            - AuthenticationFilter
+          #filters:
+            #- AuthenticationFilter
         - id: service-promociones
           uri: http://localhost:8090
           predicates:
             - Path=/api/v1/promociones/**
-          filters:
-            - AuthenticationFilter
+          #filters:
+            #- AuthenticationFilter
 
 eureka:
   client:
