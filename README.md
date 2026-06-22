@@ -111,7 +111,7 @@ Para crear este proyecto, necesitas:
 }
 ```
 ### Crear un Pedido (POST)
-**URL:** `http://localhost:8080/api/v1/pedidos`
+**URL:** `http://localhost:8080/api/v1/pedidos/pedido`
 ```json
 {
     "fechaPedido": "2026-05-04",
@@ -148,7 +148,7 @@ Para crear este proyecto, necesitas:
 }
 ```
 ### Actualizar el estado del Despacho (PUT)
-**URL:** `http://localhost:8080/api/v1/despachos/1/estado?nuevoEstado=Entregado` <--- Se agrega el nuevo estado
+**URL:** `http://localhost:8080/api/v1/despachos/1/estado`
 ```diff
 {
 	"idDespacho": 1,
@@ -169,6 +169,29 @@ Para crear este proyecto, necesitas:
     ]
 ]
 ```
+### 6. Datos de prueba (Para ejecución en Swagger)
+Debes ingresar a http://localhost:8080/swagger-ui.html
 
-### 6. Modelos relacionales
+Ingresa a Servicio de Clientes
+
+## Crea una Categoría
+En `POST` /api/v1/catalogo/tipos te diriges a **Parameters** presionando **Try It Out**, luego en **Request body**, anotando:
+```json
+{
+    "nombre": "Vegano"
+}
+```
+Presiona **Execute** y luego te diriges a **Responses**, el Response Body tiene que indicar esto: 
+Code 
+200 
+
+Response Body
+```json
+{
+	"idCategoria": 9
+    "nombre": "Vegano"
+}
+```
+
+### 7. Modelos relacionales
 Los archivos VentaDonutModeloRelacional/ y VentaDonutModeloRelacional.dmd se encuentran en la carpeta Modelo Relacional Proyecto, el archivo .dmd se abre en Oracle DataModeler. Estos archivos **DEBEN** estar juntos para su funcionamiento en Data Modeler.
