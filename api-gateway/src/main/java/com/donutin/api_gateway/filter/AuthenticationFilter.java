@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 import java.nio.charset.StandardCharsets;
 
 @Component
-public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.Config> {
+public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.Config> { //
 
     @Value("${jwt.secret}")
     private String secreto;
@@ -30,27 +30,34 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
     public GatewayFilter apply(Config config) {
         return (exchange, chain) -> {
             
+            String rutaPeticion = exchange.getRequest().getURI().getPath();
+            
+            // Si la ruta contiene "/v3/api-docs", se ignora la validación del token
+            if (rutaPeticion != null && rutaPeticion.contains("/v3/api-docs")) {
+                return chain.filter(exchange); // Deja pasar la petición directamente al microservicio
+            }
+            
             // 1. Obtener la cabecera Authorization
-            String authHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
+            String authHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION); 
 
             // 2. Validar que exista y tenga el formato "Bearer "
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-                return onError(exchange, "Token faltante o formato inválido", HttpStatus.UNAUTHORIZED);
+                return onError(exchange, "Token faltante o formato inválido", HttpStatus.UNAUTHORIZED); 
             }
 
             // 3. Extraer el token (quitando "Bearer ")
-            String token = authHeader.substring(7);
+            String token = authHeader.substring(7); 
 
             try {
                 // 4. Validar el token con la firma
-                Jwts.parserBuilder()
-                        .setSigningKey(Keys.hmacShaKeyFor(secreto.getBytes(StandardCharsets.UTF_8)))
-                        .build()
-                        .parseClaimsJws(token);
+                Jwts.parserBuilder() 
+                    .setSigningKey(Keys.hmacShaKeyFor(secreto.getBytes(StandardCharsets.UTF_8))) 
+                    .build() 
+                    .parseClaimsJws(token);
 
-            } catch (Exception e) {
+            } catch (Exception e) { 
                 // Si el token expiró o la firma no coincide
-                return onError(exchange, "Token inválido o expirado", HttpStatus.UNAUTHORIZED);
+                return onError(exchange, "Token inválido o expirado", HttpStatus.UNAUTHORIZED); 
             }
 
             // 5. Si todo está bien, continuar al microservicio
@@ -58,9 +65,8 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
         };
     }
 
-    private Mono<Void> onError(ServerWebExchange exchange, String err, HttpStatus httpStatus) {
+    private Mono<Void> onError(ServerWebExchange exchange, String err, HttpStatus httpStatus) { 
         exchange.getResponse().setStatusCode(httpStatus);
-        // Aquí podrías añadir lógica para escribir el mensaje 'err' en el body si quisieras
         return exchange.getResponse().setComplete();
     }
 }
