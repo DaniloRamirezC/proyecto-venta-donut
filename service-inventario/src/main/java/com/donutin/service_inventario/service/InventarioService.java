@@ -96,7 +96,7 @@ public class InventarioService {
             try {
                 Object donut = webClientBuilder.build()
                 .get()
-                .uri("http://localhost:8080/api/v1/donuts/" + receta.getIdDonut())
+                .uri("http://localhost:8081/api/v1/catalogo/donuts/" + receta.getIdDonut())
                 .retrieve()
                 .bodyToMono(Object.class)
                 .block();
