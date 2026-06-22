@@ -172,7 +172,7 @@ Para crear este proyecto, necesitas:
 ### 6. Datos de prueba (Para ejecución en Swagger)
 Debes ingresar a http://localhost:8080/swagger-ui.html
 
-Ingresa a Servicio de Clientes
+Ingresa a Servicio de Catalogo
 
 ## Crea una Categoría
 En `POST` /api/v1/catalogo/tipos te diriges a **Parameters** presionando **Try It Out**, luego en **Request body**, anotando:
